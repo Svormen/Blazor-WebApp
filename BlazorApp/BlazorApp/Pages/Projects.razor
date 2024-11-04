@@ -1,0 +1,51 @@
+﻿@page "/projects"
+
+<PageTitle>My Projects</PageTitle>
+
+<style>
+    body {
+        background-color: #f1f1f1;
+    }
+</style>
+
+<h1>School Projects</h1>
+&emsp;
+
+<div class="projects-container">
+    @foreach (var project in MyProjects)
+    {
+        <div class="project-box" @onclick="() => ToggleDetails(project)">
+            <div class="project-header">
+                <h2>@project.Title</h2>
+            </div>
+            @if (project.ShowDetails)
+            {
+                <p>@project.Description</p>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    // Define a list of projects with titles and descriptions
+    private List<Project> MyProjects = new()
+{
+        new Project { Title = "Project 1", Description = "Description of Project 1" },
+        new Project { Title = "Project 2", Description = "Description of Project 2" },
+        new Project { Title = "Project 3", Description = "Description of Project 3" }
+    };
+
+    // Function to toggle the visibility of the details for a project
+    private void ToggleDetails(Project project)
+    {
+        project.ShowDetails = !project.ShowDetails;
+    }
+
+    // Define a class for Project with properties
+    private class Project
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public bool ShowDetails { get; set; } = false;
+    }
+}

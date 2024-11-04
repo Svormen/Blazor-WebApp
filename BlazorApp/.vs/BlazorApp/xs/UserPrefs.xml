@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{055CEE14-2722-47AD-887C-368037A3379E}|Default">
+  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorApp/Pages/Projects.razor">
+    <Files>
+      <File FileName="BlazorApp/Program.cs" Line="1" Column="1" />
+      <File FileName="BlazorApp/Pages/Index.razor" Line="4" Column="1" />
+      <File FileName="BlazorApp/Pages/Counter.razor" Line="18" Column="2" />
+      <File FileName="BlazorApp/Shared/NavMenu.razor" Line="12" Column="34" />
+      <File FileName="BlazorApp/Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="BlazorApp/Shared/SurveyPrompt.razor" Line="1" Column="1" />
+      <File FileName="BlazorApp/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="BlazorApp/_Imports.razor" Line="1" Column="1" />
+      <File FileName="BlazorApp/App.razor" Line="1" Column="1" />
+      <File FileName="BlazorApp/wwwroot/index.html" Line="1" Column="1" />
+      <File FileName="BlazorApp/Pages/Projects.razor" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlazorApp" expanded="True">
+            <Node name="BlazorApp" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Projects.razor" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Shared" expanded="True">
+                <Node name="NavMenu.razor" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="sample-data" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
