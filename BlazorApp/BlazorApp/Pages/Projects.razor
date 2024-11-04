@@ -8,13 +8,16 @@
     }
 </style>
 
-<h1>School Projects</h1>
+<h1 class="titleText">
+    School Projects
+</h1>
+<hr>
 &emsp;
 
 <div class="projects-container">
     @foreach (var project in MyProjects)
     {
-        <div class="project-box" @onclick="() => ToggleDetails(project)">
+        <div class="project-box @(project.ShowDetails ? "active" : "")" @onclick="() => ToggleDetails(project)">
             <div class="project-header">
                 <h2>@project.Title</h2>
             </div>
