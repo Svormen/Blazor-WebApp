@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vmy3fm2REmk=",
+  "dgSpecHash": "sDbJZ8hxyGI=",
   "success": true,
-  "projectFilePath": "/Users/ssvorada/Projects/BlazorApp/BlazorApp/BlazorApp.csproj",
+  "projectFilePath": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/BlazorApp.csproj",
   "expectedPackageFiles": [
     "/Users/ssvorada/.nuget/packages/microsoft.aspnetcore.authorization/6.0.9/microsoft.aspnetcore.authorization.6.0.9.nupkg.sha512",
     "/Users/ssvorada/.nuget/packages/microsoft.aspnetcore.components/6.0.9/microsoft.aspnetcore.components.6.0.9.nupkg.sha512",

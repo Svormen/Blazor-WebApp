@@ -1925,11 +1925,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ssvorada/Projects/BlazorApp/BlazorApp/BlazorApp.csproj",
+      "projectUniqueName": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/BlazorApp.csproj",
       "projectName": "BlazorApp",
-      "projectPath": "/Users/ssvorada/Projects/BlazorApp/BlazorApp/BlazorApp.csproj",
+      "projectPath": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/BlazorApp.csproj",
       "packagesPath": "/Users/ssvorada/.nuget/packages/",
-      "outputPath": "/Users/ssvorada/Projects/BlazorApp/BlazorApp/obj/",
+      "outputPath": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ssvorada/.nuget/NuGet/NuGet.Config"
