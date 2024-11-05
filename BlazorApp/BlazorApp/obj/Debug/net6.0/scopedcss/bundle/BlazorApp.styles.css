@@ -13,22 +13,25 @@
     border-radius: 13px;
     padding: 25px;
     margin: 23px 0;
-    transition: padding 1s ease, background 1s ease;
+    transition: padding 0.7s ease, background 1s ease;
     font-size: 20px;
+    background: #007fff;
 }
 
-.project-box:hover[b-xlm6sos3rl] {
-    border: 2px solid black;
-    padding: 50px;
+.projects-container:hover .project-box[b-xlm6sos3rl] {
+    filter: blur(1px);
+    opacity: 0.5;
+}
+
+.projects-container:hover .project-box:hover[b-xlm6sos3rl] {
+    filter: none;
+    opacity: 1;
     background: linear-gradient(90deg, rgba(233,196,255,1) 0%, rgba(160,0,255,1) 52%, rgba(0,127,255,1) 100%);
-}
-
-.project-box:hover.project-header[b-xlm6sos3rl] {
-    font-size: 30px;
+    padding: 50px;
 }
 
 .project-box.active[b-xlm6sos3rl] {
-    background-color: #d1c4e9;
+    background: #8a67fb;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-3ij3p7wwc4] {
