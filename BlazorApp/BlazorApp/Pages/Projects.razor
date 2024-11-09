@@ -33,7 +33,12 @@
     // Define a list of projects with titles and descriptions
     private List<Project> MyProjects = new()
     {
-        new Project { Title = "Master Thesis", Description = "Description of Project 1" },
+        new Project { Title = "Master Thesis", Description = "This work focuses on the historical development " +
+            "and current trends in the field of flight data visualization in the cockpit. Based on this analysis, " +
+            "a modern flight data visualization is proposed, which is subsequently implemented in a virtual " +
+            "reality-supported aviation simulation environment. The aim of the work was to create flight data " +
+            "visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. " +
+            "The primary goal is to enhance the efficiency and safety of aviation through innovative visual means." },
         new Project { Title = "Bachelor Thesis", Description = "Description of Project 2" },
         new Project { Title = "Another project", Description = "Description of Project 3" }
     };
@@ -41,7 +46,22 @@
     // Function to toggle the visibility of the details for a project
     private void ToggleDetails(Project project)
     {
-        project.ShowDetails = !project.ShowDetails;
+        if (project.ShowDetails)
+        {
+            // If already active, deactivate it
+            project.ShowDetails = false;
+        }
+        else
+        {
+            // Deactivate all other projects
+            foreach (var proj in MyProjects)
+            {
+                proj.ShowDetails = false;
+            }
+
+            // Activate the selected project
+            project.ShowDetails = true;
+        }
     }
 
     // Define a class for Project with properties
