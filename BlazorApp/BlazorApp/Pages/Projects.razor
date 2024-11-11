@@ -14,7 +14,7 @@
 <hr>
 &emsp;
 
-<div class="projects-container">
+<div class="projects-container @(IsAnyProjectActive ? "active" : "")">
     @foreach (var project in MyProjects)
     {
         <div class="project-box @(project.ShowDetails ? "active" : "")" @onclick="() => ToggleDetails(project)">
@@ -23,7 +23,7 @@
             </div>
             @if (project.ShowDetails)
             {
-                    <hr>
+                <hr>
                 <p>@project.Description</p>
             }
         </div>
@@ -31,7 +31,7 @@
 </div>
 
 @code {
-    // Define a list of projects with titles and descriptions
+
     private List<Project> MyProjects = new()
     {
         new Project { Title = "Master Thesis", Description = "This work focuses on the historical development " +
@@ -44,28 +44,24 @@
         new Project { Title = "Another project", Description = "Description of Project 3" }
     };
 
-    // Function to toggle the visibility of the details for a project
+    private bool IsAnyProjectActive => MyProjects.Any(p => p.ShowDetails);
+
     private void ToggleDetails(Project project)
     {
         if (project.ShowDetails)
         {
-            // If already active, deactivate it
             project.ShowDetails = false;
         }
         else
         {
-            // Deactivate all other projects
             foreach (var proj in MyProjects)
             {
                 proj.ShowDetails = false;
             }
-
-            // Activate the selected project
             project.ShowDetails = true;
         }
     }
 
-    // Define a class for Project with properties
     private class Project
     {
         public string Title { get; set; }
