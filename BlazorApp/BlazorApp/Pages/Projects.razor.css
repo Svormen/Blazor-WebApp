@@ -15,7 +15,7 @@
 
 .projects-container.active {
     transition: max-width 0.7s ease;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .project-box {
