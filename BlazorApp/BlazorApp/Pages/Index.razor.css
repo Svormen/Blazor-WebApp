@@ -30,13 +30,13 @@
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: black;
     margin-bottom: 20px;
 }
 
 .container:hover h1 {
-    color: black;
-    font-weight: bold;
+    color: #2c3e50;
+    #font-weight: bold;
 }
 
 p {
@@ -48,7 +48,27 @@ p {
 }
 
 .container:hover p {
-    color: #3498db;
-    font-weight: bold;
+    color: grey;
+    #font-weight: bold;
 }
 
+.educationList {
+    text-align: left;
+    list-style-position: inside;
+}
+
+.two-column-list {
+    display: inline-block;
+    column-count: 2;
+    column-gap: 50px;
+    list-style-position: inside;
+}
+
+.two-column-list li {
+    padding-top: 10px;
+}
+
+.languageList li {
+    list-style-position: inside;
+    padding-top: 10px;
+}

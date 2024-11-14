@@ -31,13 +31,13 @@ body[b-cawgfizwi4] {
 h1[b-cawgfizwi4] {
     text-align: center;
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: black;
     margin-bottom: 20px;
 }
 
 .container:hover h1[b-cawgfizwi4] {
-    color: black;
-    font-weight: bold;
+    color: #2c3e50;
+    #font-weight: bold;
 }
 
 p[b-cawgfizwi4] {
@@ -49,10 +49,30 @@ p[b-cawgfizwi4] {
 }
 
 .container:hover p[b-cawgfizwi4] {
-    color: #3498db;
-    font-weight: bold;
+    color: grey;
+    #font-weight: bold;
 }
 
+.educationList[b-cawgfizwi4] {
+    text-align: left;
+    list-style-position: inside;
+}
+
+.two-column-list[b-cawgfizwi4] {
+    display: inline-block;
+    column-count: 2;
+    column-gap: 50px;
+    list-style-position: inside;
+}
+
+.two-column-list li[b-cawgfizwi4] {
+    padding-top: 10px;
+}
+
+.languageList li[b-cawgfizwi4] {
+    list-style-position: inside;
+    padding-top: 10px;
+}
 /* /Pages/Projects.razor.rz.scp.css */
 .titleText[b-xlm6sos3rl] {
     text-align: center;
