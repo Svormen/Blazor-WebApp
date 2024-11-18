@@ -1,2 +1,2 @@
 # WebApp
-This is web application about me.
+This web application is about me.
