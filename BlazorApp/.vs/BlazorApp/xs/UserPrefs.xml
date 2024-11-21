@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{055CEE14-2722-47AD-887C-368037A3379E}|Default">
-  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="BlazorApp/Pages/Projects.razor">
     <Files>
-      <File FileName="BlazorApp/Program.cs" Line="1" Column="1" />
-      <File FileName="BlazorApp/Pages/Index.razor" Line="4" Column="1" />
-      <File FileName="BlazorApp/Pages/Counter.razor" Line="18" Column="2" />
-      <File FileName="BlazorApp/Shared/NavMenu.razor" Line="12" Column="34" />
       <File FileName="BlazorApp/Shared/MainLayout.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/Shared/SurveyPrompt.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="BlazorApp/_Imports.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/App.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/wwwroot/index.html" Line="1" Column="1" />
-      <File FileName="BlazorApp/Pages/Projects.razor" Line="7" Column="1" />
+      <File FileName="BlazorApp/Shared/MainLayout.razor.css" Line="31" Column="19" />
+      <File FileName="BlazorApp/Shared/NavMenu.razor" Line="11" Column="1" />
+      <File FileName="BlazorApp/Shared/NavMenu.razor.css" Line="7" Column="37" />
+      <File FileName="BlazorApp/Pages/Index.razor" Line="85" Column="46" />
+      <File FileName="BlazorApp/Pages/Index.razor.css" Line="94" Column="14" />
+      <File FileName="BlazorApp/Pages/Projects.razor" Line="35" Column="46" />
+      <File FileName="BlazorApp/Pages/Projects.razor.css" Line="18" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,10 +23,12 @@
           <Node name="BlazorApp" expanded="True">
             <Node name="BlazorApp" expanded="True">
               <Node name="Pages" expanded="True">
-                <Node name="Projects.razor" selected="True" />
+                <Node name="Index.razor" expanded="True" />
+                <Node name="Projects.razor" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
+                <Node name="MainLayout.razor" expanded="True" />
                 <Node name="NavMenu.razor" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
@@ -42,6 +43,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>
