@@ -91,8 +91,22 @@ p.aboutMe[b-cawgfizwi4] {
     padding-top: 10px;
 }
 
+.contactInfo[b-cawgfizwi4] {
+    line-height: 2.5;
+}
+
 p.contactInfo[b-cawgfizwi4] {
     margin: 10px 0;
     padding-top: 10px;
     padding-left: 30px;
+}
+.oi[b-cawgfizwi4] {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    vertical-align: text-top;
+    top: -1px;
+}
+
+.oi-tablet[b-cawgfizwi4] {
+    padding-left: 1.5px;
 }
