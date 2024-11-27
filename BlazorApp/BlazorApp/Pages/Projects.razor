@@ -22,30 +22,40 @@
             @if (project.ShowDetails)
             {
                 <hr>
-                <p>@project.Description</p>
+                <p class="description">@project.Description</p>
             }
         </div>
     }
 </div>
 
 @code {
-
     private List<Project> MyProjects = new()
     {
-        new Project { Title = "Master Thesis <br> <span style='font-size: smaller;'>(Futuristic Aircraft Cockpit Design)</span>",
-            Description = "This work focuses on the historical development " +
-            "and current trends in the field of flight data visualization in the cockpit. Based on this analysis, " +
-            "a modern flight data visualization is proposed, which is subsequently implemented in a virtual " +
-            "reality-supported aviation simulation environment. The aim of the work was to create flight data " +
-            "visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. " +
-            "The primary goal is to enhance the efficiency and safety of aviation through innovative visual means." },
-        new Project { Title = "Bachelor Thesis <br> <span style='font-size: smaller;'>(Graphical Interface for Head-Up Display)</span>",
-            Description = "This work deals with trends in the field of flight data visualization. The aim of the work " +
-            "is to design own visualization of flight data for a head-up display and then implement the proposal in a " +
-            "flight simulator environment, which contains technologies that support\nvirtual reality. The specific intention " +
-            "was creating a head-up display for the electric plane\nwith vertical take-off and landing (eVTOL)." },
-        new Project { Title = "Another project",
-            Description = "Description of Project 3" }
+        new Project
+        {
+            Title = "Master Thesis <br> <span style='font-size: smaller;'>(Futuristic Aircraft Cockpit Design)</span>",
+            Description = "This work focuses on the historical development and current trends in the field of flight data visualization in the cockpit. Based on this analysis, a modern flight data visualization is proposed, which is subsequently implemented in a virtual reality-supported aviation simulation environment. The aim of the work was to create flight data visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. The primary goal is to enhance the efficiency and safety of aviation through innovative visual means."
+        },
+        new Project
+        {
+            Title = "Bachelor Thesis <br> <span style='font-size: smaller;'>(Graphical Interface for Head-Up Display)</span>",
+            Description = "This work deals with trends in the field of flight data visualization. The aim of the work is to design own visualization of flight data for a head-up display and then implement the proposal in a flight simulator environment, which contains technologies that support virtual reality. The specific intention was creating a head-up display for the electric plane with vertical take-off and landing (eVTOL)."
+        },
+        new Project
+        {
+            Title = "First project",
+            Description = "Description of First project"
+        },
+        new Project
+        {
+            Title = "Second project",
+            Description = "Description of Second project"
+        },
+        new Project
+        {
+            Title = "Third project",
+            Description = "Description of Third project"
+        }
     };
 
     private bool IsAnyProjectActive => MyProjects.Any(p => p.ShowDetails);
@@ -54,10 +64,15 @@
     {
         if (project.ShowDetails)
         {
-            project.ShowDetails = false;
+            // Deactivate all projects
+            foreach (var proj in MyProjects)
+            {
+                proj.ShowDetails = false;
+            }
         }
         else
         {
+            // Deactivate all projects and activate clicked one
             foreach (var proj in MyProjects)
             {
                 proj.ShowDetails = false;
