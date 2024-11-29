@@ -12,8 +12,8 @@
 }
 
 .project-box {
-    width: 333px;
-    height: 333px;
+    width: 24%;
+    height: 200px;
     background-color: #3b80ee;
     color: white;
     border-radius: 23px;
@@ -50,7 +50,7 @@
 
 .project-header {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
 }
 

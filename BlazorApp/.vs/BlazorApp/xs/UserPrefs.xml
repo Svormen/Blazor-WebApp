@@ -9,13 +9,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="BlazorApp/Pages/Projects.razor">
     <Files>
       <File FileName="BlazorApp/Shared/MainLayout.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/Shared/MainLayout.razor.css" Line="31" Column="19" />
+      <File FileName="BlazorApp/Shared/MainLayout.razor.css" Line="15" Column="48" />
       <File FileName="BlazorApp/Shared/NavMenu.razor" Line="11" Column="1" />
-      <File FileName="BlazorApp/Shared/NavMenu.razor.css" Line="7" Column="37" />
-      <File FileName="BlazorApp/Pages/Index.razor" Line="85" Column="46" />
-      <File FileName="BlazorApp/Pages/Index.razor.css" Line="94" Column="14" />
-      <File FileName="BlazorApp/Pages/Projects.razor" Line="35" Column="46" />
-      <File FileName="BlazorApp/Pages/Projects.razor.css" Line="18" Column="17" />
+      <File FileName="BlazorApp/Shared/NavMenu.razor.css" Line="7" Column="5" />
+      <File FileName="BlazorApp/Pages/Index.razor" Line="12" Column="20" />
+      <File FileName="BlazorApp/Pages/Index.razor.css" Line="107" Column="12" />
+      <File FileName="BlazorApp/Pages/Projects.razor" Line="57" Column="48" />
+      <File FileName="BlazorApp/Pages/Projects.razor.css" Line="16" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,7 +24,7 @@
             <Node name="BlazorApp" expanded="True">
               <Node name="Pages" expanded="True">
                 <Node name="Index.razor" expanded="True" />
-                <Node name="Projects.razor" expanded="True" />
+                <Node name="Projects.razor" expanded="True" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
