@@ -27,6 +27,27 @@
     padding: 20px;
 }
 
+.project-box:not(.active):nth-child(1):hover {
+    background-color: #ff6f61;
+}
+
+.project-box:not(.active):nth-child(2):hover {
+    background-color: #6a5acd;
+}
+
+.project-box:not(.active):nth-child(3):hover {
+    background-color: #48d1cc;
+}
+
+.project-box:not(.active):nth-child(4):hover {
+    background-color: #ffa500;
+}
+
+.project-box:not(.active):nth-child(5):hover {
+    background-color: #32cd32;
+}
+
+
 .project-box.active {
     flex: 1 1 100%;
     max-width: 100%;
@@ -40,12 +61,6 @@
     #opacity: 0.6;
     #filter: blur(1px);
     #transition: all 0.3s ease-in-out;
-}
-
-.project-box:not(.active):hover {
-    opacity: 1;
-    background-color: #032c7e;
-    #filter: blur(0px);
 }
 
 .project-header {
