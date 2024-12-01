@@ -14,9 +14,11 @@
 .project-box {
     width: 300px;
     height: 244px;
-    background-color: #3b80ee;
+    background-color: #3a77e3;
     color: white;
     border-radius: 23px;
+    border: 3px solid black;
+    #box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.7);
     #transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -29,32 +31,43 @@
 
 .project-box:not(.active):nth-child(1):hover {
     background-color: #ff6f61;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(2):hover {
     background-color: #6a5acd;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(3):hover {
     background-color: #48d1cc;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(4):hover {
     background-color: #ffa500;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(5):hover {
     background-color: #32cd32;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 
 .project-box.active {
     flex: 1 1 100%;
     max-width: 100%;
-    height: auto;
+    height: auto;  
     background-color: #82b9f7;
     order: -1;
     padding: 40px;
+    box-shadow: 0 10px 7px rgba(0, 0, 0, 0.5);
 }
 
 .project-box:not(.active) {
@@ -64,14 +77,12 @@
 }
 
 .project-header {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: white;
+    color: white;    
 }
 
 .description {
     color: black;
-    font-size: 2.5rem;
+    font-size: large;
 }
 
 .project-box.active .project-header {
@@ -80,5 +91,4 @@
 
 .project-box p {
     line-height: 1.6;
-    font-size: 1rem;
 }
