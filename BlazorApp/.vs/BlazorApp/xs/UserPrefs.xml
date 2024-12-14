@@ -1,21 +1,16 @@
 ﻿<Properties StartupConfiguration="{055CEE14-2722-47AD-887C-368037A3379E}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="BlazorApp/Pages/Projects.razor">
     <Files>
       <File FileName="BlazorApp/Shared/MainLayout.razor" Line="1" Column="1" />
-      <File FileName="BlazorApp/Shared/MainLayout.razor.css" Line="15" Column="48" />
+      <File FileName="BlazorApp/Shared/MainLayout.razor.css" Line="15" Column="57" />
       <File FileName="BlazorApp/Shared/NavMenu.razor" Line="11" Column="1" />
       <File FileName="BlazorApp/Shared/NavMenu.razor.css" Line="7" Column="5" />
       <File FileName="BlazorApp/Pages/Index.razor" Line="12" Column="20" />
-      <File FileName="BlazorApp/Pages/Index.razor.css" Line="107" Column="12" />
-      <File FileName="BlazorApp/Pages/Projects.razor" Line="57" Column="48" />
-      <File FileName="BlazorApp/Pages/Projects.razor.css" Line="16" Column="16" />
+      <File FileName="BlazorApp/Pages/Index.razor.css" Line="26" Column="19" />
+      <File FileName="BlazorApp/Pages/Projects.razor" Line="14" Column="14" />
+      <File FileName="BlazorApp/Pages/Projects.razor.css" Line="57" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,4 +38,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BlazorApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
