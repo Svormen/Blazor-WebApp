@@ -12,7 +12,8 @@
 }
 
 .container {
-    background: #ffffff;
+    /*background: #ffffff;*/
+    background: linear-gradient(90deg, #ffffff, #c0c0c0);
     padding: 40px;
     padding-top: 20px;
     border-radius: 13px;
@@ -54,6 +55,26 @@ p.aboutMe {
 }
 
 .fa-user-o {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-graduation-cap {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-code {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-check {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-language {
     margin-left: 10px;
     margin-top: 10px;
 }

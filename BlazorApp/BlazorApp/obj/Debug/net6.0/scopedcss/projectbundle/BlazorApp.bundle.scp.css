@@ -13,7 +13,8 @@ body[b-cawgfizwi4] {
 }
 
 .container[b-cawgfizwi4] {
-    background: #ffffff;
+    /*background: #ffffff;*/
+    background: linear-gradient(90deg, #ffffff, #c0c0c0);
     padding: 40px;
     padding-top: 20px;
     border-radius: 13px;
@@ -55,6 +56,26 @@ p.aboutMe[b-cawgfizwi4] {
 }
 
 .fa-user-o[b-cawgfizwi4] {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-graduation-cap[b-cawgfizwi4] {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-code[b-cawgfizwi4] {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-check[b-cawgfizwi4] {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-language[b-cawgfizwi4] {
     margin-left: 10px;
     margin-top: 10px;
 }
@@ -146,7 +167,8 @@ p.contactInfo[b-cawgfizwi4] {
 .project-box[b-xlm6sos3rl] {
     width: 300px;
     height: 244px;
-    background-color: #3a77e3;
+    /*background: linear-gradient(90deg, #ffffff, #c0c0c0);*/
+    background: linear-gradient(180deg, #032c7e, #3b80ee);
     color: white;
     border-radius: 23px;
     border: 3px solid black;
@@ -162,31 +184,31 @@ p.contactInfo[b-cawgfizwi4] {
 }
 
 .project-box:not(.active):nth-child(1):hover[b-xlm6sos3rl] {
-    background-color: #ff6f61;
+    background: linear-gradient(90deg, #ff6f61, #ff6f61);
     box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(2):hover[b-xlm6sos3rl] {
-    background-color: #6a5acd;
+    background: linear-gradient(90deg, #6a5acd, #6a5acd);
     box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(3):hover[b-xlm6sos3rl] {
-    background-color: #48d1cc;
+    background: linear-gradient(90deg, #48d1cc, #48d1cc);
     box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(4):hover[b-xlm6sos3rl] {
-    background-color: #ffa500;
+    background: linear-gradient(90deg, #ffa500, #ffa500);
     box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
 
 .project-box:not(.active):nth-child(5):hover[b-xlm6sos3rl] {
-    background-color: #32cd32;
+    background: linear-gradient(90deg, #32cd32, #32cd32);
     box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
@@ -196,7 +218,7 @@ p.contactInfo[b-cawgfizwi4] {
     flex: 1 1 100%;
     max-width: 100%;
     height: auto;  
-    background-color: #82b9f7;
+    background: linear-gradient(90deg, #82b9f7, #82b9f7);
     order: -1;
     padding: 40px;
     box-shadow: 0 10px 7px rgba(0, 0, 0, 0.5);
