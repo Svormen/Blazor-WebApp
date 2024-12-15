@@ -27,6 +27,11 @@
     box-shadow: 0 12px 200px rgba(0, 0, 0, 0.1);
 }
 
+
+h2 {
+    font-size: 30px;
+}
+
 h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -46,6 +51,11 @@ p.aboutMe {
     padding-top: 10px;
     padding-left: 30px;
     max-width: 98%;
+}
+
+.fa-user-o {
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .educationList {

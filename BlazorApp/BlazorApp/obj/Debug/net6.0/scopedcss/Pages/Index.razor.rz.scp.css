@@ -27,6 +27,11 @@ body[b-cawgfizwi4] {
     box-shadow: 0 12px 200px rgba(0, 0, 0, 0.1);
 }
 
+
+h2[b-cawgfizwi4] {
+    font-size: 30px;
+}
+
 h1[b-cawgfizwi4] {
     text-align: center;
     font-size: 2.5rem;
@@ -46,6 +51,11 @@ p.aboutMe[b-cawgfizwi4] {
     padding-top: 10px;
     padding-left: 30px;
     max-width: 98%;
+}
+
+.fa-user-o[b-cawgfizwi4] {
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .educationList[b-cawgfizwi4] {
