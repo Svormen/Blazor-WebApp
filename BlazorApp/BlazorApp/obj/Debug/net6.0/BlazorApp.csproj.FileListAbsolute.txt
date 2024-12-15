@@ -1640,3 +1640,5 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/d0fnw7evm3.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/hehisk0lt8.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/BlazorApp.csproj.Up2Date
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/package-lock.json
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/package.json

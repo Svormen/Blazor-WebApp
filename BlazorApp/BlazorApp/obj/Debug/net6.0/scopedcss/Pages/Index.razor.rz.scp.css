@@ -84,9 +84,19 @@ p.aboutMe[b-cawgfizwi4] {
     padding-top: 10px;
 }
 
-.interestList li[b-cawgfizwi4] {
-    list-style-position: inside;
+.interestList[b-cawgfizwi4] {
+    line-height: 2.5;
+}
+
+.fa[b-cawgfizwi4] {
+    margin-right: 10px;
+    vertical-align: text-top;
+}
+
+p.interestList[b-cawgfizwi4] {
+    margin: 10px 0;
     padding-top: 10px;
+    padding-left: 30px;
 }
 
 .contactInfo[b-cawgfizwi4] {

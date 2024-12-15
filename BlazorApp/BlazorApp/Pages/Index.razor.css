@@ -84,9 +84,19 @@ p.aboutMe {
     padding-top: 10px;
 }
 
-.interestList li {
-    list-style-position: inside;
+.interestList {
+    line-height: 2.5;
+}
+
+.fa {
+    margin-right: 10px;
+    vertical-align: text-top;
+}
+
+p.interestList {
+    margin: 10px 0;
     padding-top: 10px;
+    padding-left: 30px;
 }
 
 .contactInfo {
