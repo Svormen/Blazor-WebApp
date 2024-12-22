@@ -71,12 +71,6 @@
     box-shadow: 0 10px 7px rgba(0, 0, 0, 0.5);
 }
 
-.project-box:not(.active) {
-    /*#opacity: 0.6;
-    #filter: blur(1px);
-    #transition: all 0.3s ease-in-out; */
-}
-
 .project-header {
     color: white;    
 }
