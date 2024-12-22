@@ -1642,3 +1642,4 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/BlazorApp.csproj.Up2Date
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/package-lock.json
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/package.json
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/scopedcss/Pages/FetchData.razor.rz.scp.css
