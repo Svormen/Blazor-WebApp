@@ -6,3 +6,11 @@ body {
 .h1Text {
     text-align: center;
 }
+
+.aboutSubjects {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    padding-top: 10px;
+}

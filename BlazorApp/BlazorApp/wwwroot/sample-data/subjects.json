@@ -1,0 +1,20 @@
+[
+  {
+    "courseTitle": "Matematika 1",
+    "courseAbbreviation": "MAT1",
+    "programme": "BIT",
+    "yearOfStudy": "1"
+  },
+  {
+    "courseTitle": "Algoritmy",
+    "courseAbbreviation": "IAL",
+    "programme": "BIT",
+    "yearOfStudy": "1"
+  },
+  {
+    "courseTitle": "Programovanie",
+    "courseAbbreviation": "IZP",
+    "programme": "BIT",
+    "yearOfStudy": "1"
+  }
+] 

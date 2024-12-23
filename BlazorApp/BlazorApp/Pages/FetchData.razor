@@ -2,7 +2,7 @@
 @page "/fetchdata"
 @inject HttpClient Http
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>Subjects</PageTitle>
 
 <style>
     body {
@@ -10,11 +10,11 @@
     }
 </style>
 
-<h1 class="h1Text">Weather forecast</h1>
+<h1 class="h1Text">Completed Subjects at University</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p class="aboutSubjects">There are some of my completed subjects at VUT FIT.</p>
 
-@if (forecasts == null)
+@if (subjects == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -23,20 +23,20 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Course title</th>
+                <th>Course abbreviation</th>
+                <th>Programme</th>
+                <th>Year of study</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var subject in subjects)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@subject.CourseTitle</td>
+                    <td>@subject.CourseAbbreviation</td>
+                    <td>@subject.Programme</td>
+                    <td>@subject.YearOfStudy</td>
                 </tr>
             }
         </tbody>
@@ -44,22 +44,19 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private Subject[]? subjects;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        subjects = await Http.GetFromJsonAsync<Subject[]>("sample-data/subjects.json");
     }
 
-    public class WeatherForecast
+    public class Subject
     {
-        public DateTime Date { get; set; }
-
-        public int TemperatureC { get; set; }
-
-        public string? Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public string? CourseTitle { get; set; }
+        public string? CourseAbbreviation { get; set; }
+        public string? Programme { get; set; }
+        public string? YearOfStudy { get; set; }
     }
 }
 
