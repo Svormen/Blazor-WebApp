@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hIWr5FpkCAoyz8z8JsRVZKUOt6yC+SO/janDVU9eyjs=",
+  "Hash": "crfpOAk0fRZjTO9QgZA6IXdNvVIM/NzGDQZThye7Hs8=",
   "Source": "BlazorApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7900,6 +7900,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/subjects2.json",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "sample-data/subjects2.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sample-data/subjects2.json"
     },
     {
       "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/weather.json",

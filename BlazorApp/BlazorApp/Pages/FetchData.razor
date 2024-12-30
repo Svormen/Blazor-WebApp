@@ -14,7 +14,7 @@
 
 <p class="aboutSubjects">(There are some of my completed subjects at VUT FIT)</p>
 
-@if (subjects == null)
+@if (subjects2 == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -30,7 +30,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var subject in subjects)
+            @foreach (var subject in subjects2)
             {
                 <tr>
                     <td>@subject.CourseTitle</td>
@@ -44,11 +44,11 @@ else
 }
 
 @code {
-    private Subject[]? subjects;
+    private Subject[]? subjects2;
 
     protected override async Task OnInitializedAsync()
     {
-        subjects = await Http.GetFromJsonAsync<Subject[]>("sample-data/subjects.json");
+        subjects2 = await Http.GetFromJsonAsync<Subject[]>("sample-data/subjects2.json");
     }
 
     public class Subject
