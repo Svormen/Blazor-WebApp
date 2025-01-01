@@ -6,43 +6,53 @@
 
 <style>
     body {
-        background-color: #f1f1f1;    
+        background-color: #f1f1f1;
     }
 </style>
+<div class="content-container">
+    <h1 class="h1Text">Subjects at University</h1>
 
-<h1 class="h1Text">Subjects at University</h1>
+    <p class="aboutSubjects">(There are some of my completed subjects at VUT FIT)</p>
 
-<p class="aboutSubjects">(There are some of my completed subjects at VUT FIT)</p>
-
-@if (subjects2 == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Course title</th>
-                <th>Course abbreviation</th>
-                <th>Programme</th>
-                <th>Year of study</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var subject in subjects2)
-            {
+    @if (subjects2 == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@subject.CourseTitle</td>
-                    <td>@subject.CourseAbbreviation</td>
-                    <td>@subject.Programme</td>
-                    <td>@subject.YearOfStudy</td>
+                    <th>Course title</th>
+                    <th>Course abbreviation</th>
+                    <th>Programme</th>
+                    <th>Year of study</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-
+            </thead>
+            <tbody>
+                @foreach (var subject in subjects2)
+                {
+                    <tr>
+                        <td>@subject.CourseTitle</td>
+                        <td>
+                            <button class="btn btn-link" @onclick="() => ToggleDescription(subject)">
+                                @subject.CourseAbbreviation
+                            </button>
+                        </td>
+                        <td>@subject.Programme</td>
+                        <td>@subject.YearOfStudy</td>
+                    </tr>
+                    @if (subject.ShowDescription)
+                    {
+                        <tr>
+                            <td colspan="4" class="descriptionRow">@subject.Description</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+</div>
 @code {
     private Subject[]? subjects2;
 
@@ -51,12 +61,19 @@ else
         subjects2 = await Http.GetFromJsonAsync<Subject[]>("sample-data/subjects2.json");
     }
 
+    private void ToggleDescription(Subject subject)
+    {
+        subject.ShowDescription = !subject.ShowDescription;
+    }
+
     public class Subject
     {
         public string? CourseTitle { get; set; }
         public string? CourseAbbreviation { get; set; }
         public string? Programme { get; set; }
         public string? YearOfStudy { get; set; }
+        public string? Description { get; set; }
+        public bool ShowDescription { get; set; } = false;
     }
 }
 

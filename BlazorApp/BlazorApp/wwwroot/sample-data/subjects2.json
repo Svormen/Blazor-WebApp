@@ -3,96 +3,112 @@
     "courseTitle": "Information Systems Analysis and Design",
     "courseAbbreviation": "AIS",
     "programme": "MITAI",
-    "yearOfStudy": "2"
+    "yearOfStudy": "2",
+    "description": "The goal of the subject is to give students knowledge of object oriented and agile methods and tools used in information system development and to learn them to apply these methods and tools."
   },
   {
     "courseTitle": "Information System Security",
     "courseAbbreviation": "BIS",
     "programme": "MITAI",
-    "yearOfStudy": "2"
+    "yearOfStudy": "2",
+    "description": "TODO"
   },
   {
     "courseTitle": "Strategic Management of Information Systems",
     "courseAbbreviation": "SRI",
     "programme": "MITAI",
-    "yearOfStudy": "2"
+    "yearOfStudy": "2",
+    "description": "TODO"
   },
   {
     "courseTitle": "Application Development for Mobile Devices",
     "courseAbbreviation": "TAMa",
     "programme": "MITAI",
-    "yearOfStudy": "2"
+    "yearOfStudy": "2",
+    "description": "TODO"
   },
   {
     "courseTitle": "Computation Systems Architectures",
     "courseAbbreviation": "AVS",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Statistics and Probability",
     "courseAbbreviation": "MSP",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Theoretical Computer Science",
     "courseAbbreviation": "TIN",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Data Storage and Preparation",
     "courseAbbreviation": "UPA",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Artificial Intelligence and Machine Learning",
     "courseAbbreviation": "SUI",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Model-Based Analysis",
     "courseAbbreviation": "MBA",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Automated Testing and Dynamic Analysis",
     "courseAbbreviation": "ATA",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Functional and Logic Programming",
     "courseAbbreviation": "FLP",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Project Management",
     "courseAbbreviation": "MPR",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Modern Trends in Informatics",
     "courseAbbreviation": "MTIa",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "Parallel and Distributed Algorithms",
     "courseAbbreviation": "PRL",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   },
   {
     "courseTitle": "User Experience and Design of User Interfaces and Services",
     "courseAbbreviation": "UXIa",
     "programme": "MITAI",
-    "yearOfStudy": "1"
+    "yearOfStudy": "1",
+    "description": "TODO"
   }
 ] 

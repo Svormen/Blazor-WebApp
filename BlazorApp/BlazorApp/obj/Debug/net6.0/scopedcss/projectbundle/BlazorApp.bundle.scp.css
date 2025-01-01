@@ -4,6 +4,11 @@ body[b-7zu5p4p7l4] {
     overflow: hidden;
 }
 
+.content-container[b-7zu5p4p7l4] {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 .h1Text[b-7zu5p4p7l4] {
     text-align: center;
 }
@@ -14,6 +19,11 @@ body[b-7zu5p4p7l4] {
     line-height: 1.6;
     color: black;
     padding-top: 10px;
+}
+
+.descriptionRow[b-7zu5p4p7l4] {
+    background-color: #f8f9fa;
+    color: #555;
 }
 /* /Pages/Index.razor.rz.scp.css */
 body[b-cawgfizwi4] {
