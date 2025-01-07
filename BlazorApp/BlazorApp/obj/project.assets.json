@@ -1938,6 +1938,7 @@
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2011,7 +2012,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.32, 6.0.32]"
+            "version": "[6.0.36, 6.0.36]"
           }
         ],
         "frameworkReferences": {

@@ -77,7 +77,13 @@
 
 .description {
     color: black;
+    font-size: larger;
+}
+
+.project-box .linkGithub {
+    color: black;
     font-size: large;
+    margin-top: 10px;
 }
 
 .project-box.active .project-header {

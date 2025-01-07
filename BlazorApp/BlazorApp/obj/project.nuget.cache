@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sDbJZ8hxyGI=",
+  "dgSpecHash": "Iwh23Lc7G/o=",
   "success": true,
   "projectFilePath": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/BlazorApp.csproj",
   "expectedPackageFiles": [
@@ -37,8 +37,8 @@
     "/Users/ssvorada/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/Users/ssvorada/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512",
     "/Users/ssvorada/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
-    "/Users/ssvorada/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/6.0.32/microsoft.netcore.app.runtime.mono.browser-wasm.6.0.32.nupkg.sha512",
-    "/Users/ssvorada/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+    "/Users/ssvorada/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512",
+    "/Users/ssvorada/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/6.0.36/microsoft.netcore.app.runtime.mono.browser-wasm.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }

@@ -25,8 +25,8 @@
             </div>
             @if (project.ShowDetails)
             {
-                <hr>
-                <p class="description">@project.Description</p>
+                <p class="description"><hr>@project.Description</p>
+                <p class="linkGithub">For more information, visit: <a href="@project.GithubLink" target="_blank">GitHub</a></p>
             }
         </div>
     }
@@ -38,27 +38,33 @@
         new Project
         {
             Title = "Master Thesis <br> <span style='font-size: smaller;'>(Futuristic Aircraft Cockpit Design)</span>",
-            Description = "This work focuses on the historical development and current trends in the field of flight data visualization in the cockpit. Based on this analysis, a modern flight data visualization is proposed, which is subsequently implemented in a virtual reality-supported aviation simulation environment. The aim of the work was to create flight data visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. The primary goal is to enhance the efficiency and safety of aviation through innovative visual means."
+            Description = "This work focuses on the historical development and current trends in the field of flight data visualization in the cockpit. Based on this analysis, a modern flight data visualization is proposed, which is subsequently implemented in a virtual reality-supported aviation simulation environment. The aim of the work was to create flight data visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. The primary goal is to enhance the efficiency and safety of aviation through innovative visual means.",
+            GithubLink = "https://github.com/Svormen/DP"
         },
         new Project
         {
             Title = "Bachelor Thesis <br> <span style='font-size: smaller;'>(Graphical Interface for Head-Up Display)</span>",
-            Description = "This work deals with trends in the field of flight data visualization. The aim of the work is to design own visualization of flight data for a head-up display and then implement the proposal in a flight simulator environment, which contains technologies that support virtual reality. The specific intention was creating a head-up display for the electric plane with vertical take-off and landing (eVTOL)."
+            Description = "This work deals with trends in the field of flight data visualization. The aim of the work is to design own visualization of flight data for a head-up display and then implement the proposal in a flight simulator environment, which contains technologies that support virtual reality. The specific intention was creating a head-up display for the electric plane with vertical take-off and landing (eVTOL).",
+            GithubLink = "https://github.com/Svormen/BP-VUT_FIT"
+            
         },
         new Project
         {
             Title = "First project",
-            Description = "Description of First project"
+            Description = "Description of First project",
+            GithubLink = "https://github.com/Svormen"
         },
         new Project
         {
             Title = "Second project",
-            Description = "Description of Second project"
+            Description = "Description of Second project",
+            GithubLink = "https://github.com/Svormen"
         },
         new Project
         {
             Title = "Third project",
-            Description = "Description of Third project"
+            Description = "Description of Third project",
+            GithubLink = "https://github.com/Svormen"
         }
     };
 
@@ -89,6 +95,7 @@
     {
         public string? Title { get; set; }
         public string? Description { get; set; }
+        public string? GithubLink { get; set; }
         public bool ShowDetails { get; set; } = false;
     }
 }

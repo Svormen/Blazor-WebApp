@@ -257,7 +257,13 @@ p.contactInfo[b-cawgfizwi4] {
 
 .description[b-xlm6sos3rl] {
     color: black;
+    font-size: larger;
+}
+
+.project-box .linkGithub[b-xlm6sos3rl] {
+    color: black;
     font-size: large;
+    margin-top: 10px;
 }
 
 .project-box.active .project-header[b-xlm6sos3rl] {
