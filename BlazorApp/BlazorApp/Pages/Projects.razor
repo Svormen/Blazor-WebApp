@@ -25,7 +25,15 @@
             </div>
             @if (project.ShowDetails)
             {
-                <p class="description"><hr>@project.Description</p>
+                <p class="description"><hr><h4>Abstract</h4>@project.Description</p>
+                if (project.Keywords != null)
+                {
+                    <p class="keywords"><h4>Keywords</h4>@project.Keywords</p>
+                }
+                if (project.Conclusion != null)
+                {
+                    <p class="conclusion"><h4>Conclusion</h4>@project.Conclusion</p>
+                }
                 <p class="linkGithub">For more information, visit: <a href="@project.GithubLink" target="_blank">GitHub</a></p>
             }
         </div>
@@ -39,13 +47,38 @@
         {
             Title = "Master Thesis <br> <span style='font-size: smaller;'>(Futuristic Aircraft Cockpit Design)</span>",
             Description = "This work focuses on the historical development and current trends in the field of flight data visualization in the cockpit. Based on this analysis, a modern flight data visualization is proposed, which is subsequently implemented in a virtual reality-supported aviation simulation environment. The aim of the work was to create flight data visualization for Helmet-Mounted Display for aircraft capable of vertical takeoff and landing. The primary goal is to enhance the efficiency and safety of aviation through innovative visual means.",
-            GithubLink = "https://github.com/Svormen/DP"
+            GithubLink = "https://github.com/Svormen/DP",
+            Keywords = "aircraft, avionics, cockpit, electric vertical takeoff and landing, flight quantities, futuristic design, helmet-mounted display",
+            Conclusion = @"The main goal of this thesis was to create a futuristic cockpit for a modern airplane. The aim was to systematically analyse and
+             then implement a modern flight data visualisation for the Helmet Mounted Display (HMD) in a flight simulator environment, with an emphasis on 
+             the support of virtual reality technologies. The work included a discussion of the historical evolution of flight data visualization design, 
+             in order to understand the evolution of this field. Within the thesis, attention was also given to current trends in flight data visualization, 
+             analyzing the wide range of innovations and technological approaches currently used. Based on this knowledge, a flight data visualisation design 
+             for eVTOL aeroplanes was developed. These aeroplanes are known to be capable of vertical take-off and landing. This process involved carefully 
+             adjusting the correct placement and display of the various elements on the display, in order to maximize their functionality and meaningfulness 
+             to the user. The aim was also to add innovative elements to the display to help the user better navigate through the various manoeuvres. This 
+             visualization was tested periodically during development and was also tested by users after final implementation. From the responses obtained 
+             from the testing questionnaire and the values obtained regarding the user landings, a final evaluation was created. It was concluded that the 
+             flight data visualization was effective and helpful in performing various maneuvers."
         },
         new Project
         {
             Title = "Bachelor Thesis <br> <span style='font-size: smaller;'>(Graphical Interface for Head-Up Display)</span>",
             Description = "This work deals with trends in the field of flight data visualization. The aim of the work is to design own visualization of flight data for a head-up display and then implement the proposal in a flight simulator environment, which contains technologies that support virtual reality. The specific intention was creating a head-up display for the electric plane with vertical take-off and landing (eVTOL).",
-            GithubLink = "https://github.com/Svormen/BP-VUT_FIT"
+            GithubLink = "https://github.com/Svormen/BP-VUT_FIT",
+            Keywords = "flight quantities, head-up display, flight simulator, virtual reality, flight data, aviation",
+            Conclusion = @"The main objective of this bachelor thesis was to design and implement a flight data visualization for a transparent display in 
+            a flight simulator environment that incorporates virtual reality technologies. In order to create the design, it was necessary to gain the required 
+            knowledge of current trends in flight data visualization and to study the historical development of flight data visualization in the cockpit. 
+            The greatest emphasis in the design was placed on the selection of parts containing useful information used by the pilot during the flight. It 
+            was also important to design the correct placement of the different parts displayed on the display. Once the design was created, it was necessary 
+            to give the individual parts of the HUD the functionality that was implemented in the Unity application. The C# programming language was used to 
+            program the logic of the HUD. The results of testing and verification of the functionality of the transparent display was done on the basis of 
+            testing using the HTC Vive virtual reality in the X-Plane 11 flight simulator. Users first tested several maneuvers in the flight simulator on 
+            an AG-4 aircraft using the instrument panel. They then performed the same manoeuvres in Unity using the transparent display. After the testing, 
+            a questionnaire was prepared for the users with questions focused on the readability of the different parts of the transparent display, the 
+            structure of the HUD or the design of the HUD. Based on the testing and the questionnaire from various users, it was concluded that the user 
+            was able to perform the manoeuvres without any problems."
             
         },
         new Project
@@ -96,6 +129,8 @@
         public string? Title { get; set; }
         public string? Description { get; set; }
         public string? GithubLink { get; set; }
+        public string? Keywords { get; set; }
+        public string? Conclusion { get; set; }
         public bool ShowDetails { get; set; } = false;
     }
 }
