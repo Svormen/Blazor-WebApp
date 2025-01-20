@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JZhJ85EBw2KOJqCC4Cpmy015f62bjEn3DabAKb16VUg=",
+  "Hash": "etcSGcyJ9LW3HdbPjtSR8OTO53gincx6Cey+dd335iA=",
   "Source": "BlazorApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7900,6 +7900,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/photo.jpeg",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "sample-data/photo.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sample-data/photo.jpeg"
     },
     {
       "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/subjects2.json",

@@ -24,6 +24,42 @@ body[b-cawgfizwi4] {
     margin-bottom: 20px;
 }
 
+.columnMe[b-cawgfizwi4] {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr; /* Text zaberá 2/3 a fotka 1/3 */
+    gap: 20px; /* Medzera medzi textom a fotkou */
+    align-items: center; /* Zarovnanie obsahu na stred vertikálne */
+}
+
+p.aboutMe[b-cawgfizwi4] {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.myPhoto img[b-cawgfizwi4] {
+    width: 100%; /* Fotka zaberie celý svoj stĺpec */
+    height: auto; /* Zachovanie pomeru strán */
+    border-radius: 10px; /* Jemne zaoblené rohy */
+    max-width: 200px; /* Maximálna šírka fotky */
+    min-width: 200px; /* Minimálna šírka fotky */
+    margin: 0 auto; /* Centrovanie fotky, ak je menšia */
+}
+
+@media (max-width: 1280px) {
+    .columnMe[b-cawgfizwi4] {
+        grid-template-columns: 1fr; /* Jeden stĺpec */
+        gap: 10px; /* Menšia medzera */
+        justify-items: center; /* Centrovanie obsahu */
+    }
+
+    .myPhoto img[b-cawgfizwi4] {
+        max-width: 200px; /* Menšia fotka na mobiloch */
+    }
+}
+
 .container:hover[b-cawgfizwi4] {
     box-shadow: 0 12px 200px rgba(0, 0, 0, 0.1);
 }
@@ -42,16 +78,6 @@ h1[b-cawgfizwi4] {
 
 .container:hover h1[b-cawgfizwi4] {
     color: #2c3e50;
-}
-
-p.aboutMe[b-cawgfizwi4] {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
-    margin: 10px 0;
-    padding-top: 10px;
-    padding-left: 30px;
-    max-width: 98%;
 }
 
 .fa-user-o[b-cawgfizwi4] {

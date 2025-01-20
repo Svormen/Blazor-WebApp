@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets/index.html"
     },
     {
+      "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/photo.jpeg",
+      "PackagePath": "staticwebassets/sample-data/photo.jpeg"
+    },
+    {
       "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/subjects2.json",
       "PackagePath": "staticwebassets/sample-data/subjects2.json"
     },
