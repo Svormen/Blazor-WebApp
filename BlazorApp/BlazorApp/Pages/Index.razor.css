@@ -26,9 +26,9 @@
 
 .columnMe {
     display: grid;
-    grid-template-columns: 2.5fr 0.5fr; /* Text zaberá 2/3 a fotka 1/3 */
-    gap: 20px; /* Medzera medzi textom a fotkou */
-    align-items: center; /* Zarovnanie obsahu na stred vertikálne */
+    grid-template-columns: 2.5fr 0.5fr;
+    gap: 20px;
+    align-items: center;
 }
 
 p.aboutMe {
@@ -40,23 +40,23 @@ p.aboutMe {
 }
 
 .myPhoto img {
-    width: 100%; /* Fotka zaberie celý svoj stĺpec */
-    height: auto; /* Zachovanie pomeru strán */
-    border-radius: 10px; /* Jemne zaoblené rohy */
-    max-width: 200px; /* Maximálna šírka fotky */
-    min-width: 200px; /* Minimálna šírka fotky */
-    margin: 0 auto; /* Centrovanie fotky, ak je menšia */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0 auto;
 }
 
 @media (max-width: 1280px) {
     .columnMe {
-        grid-template-columns: 1fr; /* Jeden stĺpec */
-        gap: 10px; /* Menšia medzera */
-        justify-items: center; /* Centrovanie obsahu */
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
     }
 
     .myPhoto img {
-        max-width: 200px; /* Menšia fotka na mobiloch */
+        max-width: 200px;
     }
 }
 
