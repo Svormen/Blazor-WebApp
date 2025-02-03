@@ -50,6 +50,13 @@ p.aboutMe[b-cawgfizwi4] {
     padding: 10px;
 }
 
+p.aboutMeLinks[b-cawgfizwi4] {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    padding: 10px;
+}
+
 .myPhoto img[b-cawgfizwi4] {
     width: 100%;
     height: auto;

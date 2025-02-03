@@ -50,6 +50,13 @@ p.aboutMe {
     padding: 10px;
 }
 
+p.aboutMeLinks {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    padding: 10px;
+}
+
 .myPhoto img {
     width: 100%;
     height: auto;
