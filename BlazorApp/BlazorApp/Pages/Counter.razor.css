@@ -1,12 +1,25 @@
-.yearTitle {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #252525;
+.countdown-container {
     text-align: center;
+    margin: 30px auto;
+    max-width: 80%;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #032c7e, #3b80ee, #032c7e);
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.yearText {
-    font-size: 1.2em;
-    color: #252525;
+h1 {
     text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-text {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 30px 30px;
+    background: rgba(255, 255, 255, 0.15);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }

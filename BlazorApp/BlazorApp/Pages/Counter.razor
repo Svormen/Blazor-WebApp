@@ -2,27 +2,18 @@
 @page "/counter"
 @inject IJSRuntime JS
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Countdown to 2026</PageTitle>
 
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<h1>🚀 2026 Countdown 🚀</h1>
 <hr>
-<p class="yearTitle">TO 2026</p>
-<p class="yearText">@countDown</p>
+<div class="countdown-container">
+    <p class="countdown-text">@countDown</p>
+</div>
 
 @code {
-    private int currentCount = 0;
     private DateTime targetDate = new DateTime(2026, 1, 1, 0, 0, 0);
     private string countDown = string.Empty;
-    private System.Timers.Timer ?timer;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+    private System.Timers.Timer? timer;
 
     protected override void OnInitialized()
     {
@@ -38,7 +29,7 @@
     private void UpdateCountdown()
     {
         TimeSpan t = targetDate - DateTime.Now;
-        countDown = $"{t.Days} Days {t.Hours} Hours {t.Minutes} Minutes {t.Seconds} Seconds";
+        countDown = $"{t.Days} Days : {t.Hours} Hours : {t.Minutes} Minutes : {t.Seconds} Seconds";
     }
 
     public void Dispose()
