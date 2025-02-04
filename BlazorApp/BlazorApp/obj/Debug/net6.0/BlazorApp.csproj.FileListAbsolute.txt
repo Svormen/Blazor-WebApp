@@ -1643,3 +1643,4 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/3a0h0biucy.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/eq9256qdy0.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/ble1ccrtpr.gz
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/scopedcss/Pages/Counter.razor.rz.scp.css

@@ -1,3 +1,16 @@
+/* /Pages/Counter.razor.rz.scp.css */
+.yearTitle[b-fa7bvjld2f] {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #252525;
+    text-align: center;
+}
+
+.yearText[b-fa7bvjld2f] {
+    font-size: 1.2em;
+    color: #252525;
+    text-align: center;
+}
 /* /Pages/FetchData.razor.rz.scp.css */
 body[b-7zu5p4p7l4] {
     font-family: 'Roboto', sans-serif;
