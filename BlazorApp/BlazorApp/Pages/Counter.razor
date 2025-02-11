@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
+@using Newtonsoft.Json.Linq
 @page "/counter"
 @inject IJSRuntime JS
 
@@ -15,6 +16,10 @@
     private string countDown = string.Empty;
     private System.Timers.Timer? timer;
 
+    // wetaher information
+    public string apiKey = "MZQND65XWUU2RJK74PENNLGQU";
+    public string location = "Bratislava";
+
     protected override void OnInitialized()
     {
         UpdateCountdown();
@@ -30,6 +35,56 @@
     {
         TimeSpan t = targetDate - DateTime.Now;
         countDown = $"{t.Days} Days : {t.Hours} Hours : {t.Minutes} Minutes : {t.Seconds} Seconds";
+    }
+
+    // Functions for weather information
+    async void GetWeatherData()
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            try
+            {
+                string url = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}?key={apiKey}";
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                // write all data
+                Console.WriteLine(responseBody);
+
+                // Parsing JSON response
+                JObject json = JObject.Parse(responseBody);
+
+                // Getting weather data
+                var day = json["days"]?[0];
+                if (day != null)
+                {
+                    double WeatherTemperatureF = (double?)day["temp"] ?? 0;
+                    double WeatherTemperature = (WeatherTemperatureF - 32) * 5 / 9;
+                    double WeatherTemperatureMaxF = (double?)day["tempmax"] ?? 0;
+                    double WeatherTemperatureMinF = (double?)day["tempmin"] ?? 0;
+                    double WeatherTemperatureMax = (WeatherTemperatureMaxF - 32) * 5 / 9;
+                    double WeatherTemperatureMin = (WeatherTemperatureMinF - 32) * 5 / 9;
+                    double WeatherWindSpeed = (double?)day["windspeed"] ?? 0;
+                    double WeatherPressure = (double?)day["pressure"] ?? 0;
+                    double WeatherCloudCover = (double?)day["cloudcover"] ?? 0;
+                    double WeatherVisibility = (double?)day["visibility"] ?? 0;
+                }
+
+                //Console.WriteLine("Temp: " + (int)WeatherTemperature + " WindSpeed: " + WeatherWindSpeed + " Pressure:" + (int)WeatherPressure + " CloudCover:" + (int)WeatherCloudCover + " Visibility:" + WeatherVisibility + "\n");
+                /*Temperature.text = ((int)WeatherTemperature).ToString();
+                TemperatureMax.text = ((int)WeatherTemperatureMax).ToString();
+                TemperatureMin.text = ((int)WeatherTemperatureMin).ToString();
+                WindSpeed.text = ((int)WeatherWindSpeed).ToString();
+                Pressure.text = ((int)WeatherPressure).ToString();
+                CloudCover.text = ((int)WeatherCloudCover).ToString();
+                Visibility.text = WeatherVisibility.ToString();*/
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+        }
     }
 
     public void Dispose()
