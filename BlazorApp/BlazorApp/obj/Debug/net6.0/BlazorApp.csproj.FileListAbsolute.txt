@@ -1644,3 +1644,7 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/eq9256qdy0.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/ble1ccrtpr.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/scopedcss/Pages/Counter.razor.rz.scp.css
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/wwwroot/_framework/Newtonsoft.Json.dll
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/wwwroot/_framework/Newtonsoft.Json.dll.gz
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/8sdwguqhq7.gz

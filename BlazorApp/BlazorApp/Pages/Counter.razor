@@ -5,22 +5,32 @@
 
 <PageTitle>Countdown to 2026</PageTitle>
 
-<h1>🚀 2026 Countdown 🚀</h1>
+<h1>Random Apps</h1>
 <hr>
+
 <div class="countdown-container">
-    <p class="countdown-text">@countDown</p>
+    <p class="countdown-text"><h3>🚀 2026 Countdown 🚀</h3><hr>@countDown</p>
 </div>
+
+<p class="weather-text">
+    <h3>🌦️ Weather Information 🌦️</h3>
+    <hr>
+    <p>Location: @location</p>
+    <pre>@weatherInformation</pre>
+</p>
+
 
 @code {
     private DateTime targetDate = new DateTime(2026, 1, 1, 0, 0, 0);
     private string countDown = string.Empty;
     private System.Timers.Timer? timer;
 
-    // wetaher information
-    public string apiKey = "MZQND65XWUU2RJK74PENNLGQU";
-    public string location = "Bratislava";
+    // Weather information
+    private string apiKey = "MZQND65XWUU2RJK74PENNLGQU";
+    private string location = "Brno, 64, CZ";
+    private string weatherInformation = "Loading weather information ...";
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         UpdateCountdown();
         timer = new System.Timers.Timer(1000);
@@ -29,6 +39,8 @@
             InvokeAsync(StateHasChanged);
         };
         timer.Start();
+
+        await GetWeatherData();
     }
 
     private void UpdateCountdown()
@@ -37,8 +49,7 @@
         countDown = $"{t.Days} Days : {t.Hours} Hours : {t.Minutes} Minutes : {t.Seconds} Seconds";
     }
 
-    // Functions for weather information
-    async void GetWeatherData()
+    private async Task GetWeatherData()
     {
         using (HttpClient client = new HttpClient())
         {
@@ -49,13 +60,8 @@
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                // write all data
-                Console.WriteLine(responseBody);
-
-                // Parsing JSON response
                 JObject json = JObject.Parse(responseBody);
 
-                // Getting weather data
                 var day = json["days"]?[0];
                 if (day != null)
                 {
@@ -69,21 +75,28 @@
                     double WeatherPressure = (double?)day["pressure"] ?? 0;
                     double WeatherCloudCover = (double?)day["cloudcover"] ?? 0;
                     double WeatherVisibility = (double?)day["visibility"] ?? 0;
-                }
 
-                //Console.WriteLine("Temp: " + (int)WeatherTemperature + " WindSpeed: " + WeatherWindSpeed + " Pressure:" + (int)WeatherPressure + " CloudCover:" + (int)WeatherCloudCover + " Visibility:" + WeatherVisibility + "\n");
-                /*Temperature.text = ((int)WeatherTemperature).ToString();
-                TemperatureMax.text = ((int)WeatherTemperatureMax).ToString();
-                TemperatureMin.text = ((int)WeatherTemperatureMin).ToString();
-                WindSpeed.text = ((int)WeatherWindSpeed).ToString();
-                Pressure.text = ((int)WeatherPressure).ToString();
-                CloudCover.text = ((int)WeatherCloudCover).ToString();
-                Visibility.text = WeatherVisibility.ToString();*/
+                    weatherInformation = $"Temperature: {(int)WeatherTemperature}°C\n" +
+                                    $"Max temperature: {(int)WeatherTemperatureMax}°C\n" +
+                                    $"Min temperature: {(int)WeatherTemperatureMin}°C\n" +
+                                    $"Wind speed: {WeatherWindSpeed} km/h\n" +
+                                    $"Pressure: {(int)WeatherPressure} hPa\n" +
+                                    $"Cloudcover: {(int)WeatherCloudCover}%\n" +
+                                    $"Visibility: {WeatherVisibility} km";
+
+                }
+                else
+                {
+                    weatherInformation = "Problem with weather data";
+                }
             }
             catch (HttpRequestException e)
             {
-                Console.WriteLine($"Error: {e.Message}");
+                weatherInformation = $"Problem with weather data: {e.Message}";
             }
+
+            // UI update
+            await InvokeAsync(StateHasChanged);
         }
     }
 
