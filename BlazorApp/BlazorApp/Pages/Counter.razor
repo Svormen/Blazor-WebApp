@@ -20,7 +20,6 @@
     <div class="weather-text">
         <h3>🌦️ Weather 🌦️</h3>
         <hr>
-        <p><strong><span class="location">Brno</span></strong></p>
 
         @if (WeatherTemperature == -100 || WeatherTemperatureMax == -100 || 
              WeatherTemperatureMin == -100 || WeatherPressure == -100 || 
@@ -30,6 +29,7 @@
         }
         else
         {
+            <p><strong><span class="location">Brno</span></strong></p>
             <p><strong>Temperature:</strong> <span class="temp">@WeatherTemperature °C</span></p>
             <p><strong>Clouds:</strong> <span class="cloud">@WeatherCloudCover %</span></p>
             
