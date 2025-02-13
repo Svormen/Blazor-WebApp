@@ -36,3 +36,12 @@ h3 {
     font-weight: bold;
     padding: 30px;
 }
+
+.temp-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+

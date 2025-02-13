@@ -36,3 +36,12 @@ h3[b-fa7bvjld2f] {
     font-weight: bold;
     padding: 30px;
 }
+
+.temp-row[b-fa7bvjld2f] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+

@@ -9,16 +9,40 @@
 <hr>
 
 <div class="countdown-container">
-    <p class="countdown-text"><h3>🚀 2026 Countdown 🚀</h3><hr>@countDown</p>
+    <p class="countdown-text">
+        <h3>🚀 2026 Countdown 🚀</h3>
+        <hr>
+        @countDown
+    </p>
 </div>
 
 <div class="countdown-container">
-    <p class="weather-text">
-        <h3>🌦️ Weather Information 🌦️</h3>
+    <div class="weather-text">
+        <h3>🌦️ Weather 🌦️</h3>
         <hr>
-        <p>Location: @location</p>
-        <pre>@weatherInformation</pre>
-    </p>
+        <p><strong><span class="location">Brno</span></strong></p>
+
+        @if (WeatherTemperature == -100 || WeatherTemperatureMax == -100 || 
+             WeatherTemperatureMin == -100 || WeatherPressure == -100 || 
+             WeatherCloudCover == -100 || WeatherVisibility == -100)
+        {
+            <p>Loading...</p>
+        }
+        else
+        {
+            <p><strong>Temperature:</strong> <span class="temp">@WeatherTemperature °C</span></p>
+            <p><strong>Clouds:</strong> <span class="cloud">@WeatherCloudCover %</span></p>
+            
+            <div class="temp-row">
+                <p><strong>Max:</strong> <span class="max-temp">@WeatherTemperatureMax °C</span></p>
+                <p><strong>Min:</strong> <span class="min-temp">@WeatherTemperatureMin °C</span></p>
+            </div>
+
+            <p><strong>Wind:</strong> <span class="wind">@WeatherWindSpeed km/h</span></p>
+            <p><strong>Pressure:</strong> <span class="pressure">@WeatherPressure hPa</span></p>
+            <p><strong>Visibility:</strong> <span class="visibility">@WeatherVisibility km</span></p>
+        }
+    </div>
 </div>
 
 
@@ -27,10 +51,16 @@
     private string countDown = string.Empty;
     private System.Timers.Timer? timer;
 
-    // Weather information
     private string apiKey = "MZQND65XWUU2RJK74PENNLGQU";
     private string location = "Brno, 64, CZ";
-    private string weatherInformation = "Loading weather information ...";
+    
+    private int WeatherTemperature = -100, 
+            WeatherTemperatureMax = -100, 
+            WeatherTemperatureMin = -100, 
+            WeatherPressure = -100, 
+            WeatherCloudCover = -100;
+    private double WeatherWindSpeed = -100,
+            WeatherVisibility = -100;
 
     protected override async Task OnInitializedAsync()
     {
@@ -63,41 +93,28 @@
                 string responseBody = await response.Content.ReadAsStringAsync();
 
                 JObject json = JObject.Parse(responseBody);
-
                 var day = json["days"]?[0];
+
                 if (day != null)
                 {
-                    double WeatherTemperatureF = (double?)day["temp"] ?? 0;
-                    double WeatherTemperature = (WeatherTemperatureF - 32) * 5 / 9;
-                    double WeatherTemperatureMaxF = (double?)day["tempmax"] ?? 0;
-                    double WeatherTemperatureMinF = (double?)day["tempmin"] ?? 0;
-                    double WeatherTemperatureMax = (WeatherTemperatureMaxF - 32) * 5 / 9;
-                    double WeatherTemperatureMin = (WeatherTemperatureMinF - 32) * 5 / 9;
-                    double WeatherWindSpeed = (double?)day["windspeed"] ?? 0;
-                    double WeatherPressure = (double?)day["pressure"] ?? 0;
-                    double WeatherCloudCover = (double?)day["cloudcover"] ?? 0;
-                    double WeatherVisibility = (double?)day["visibility"] ?? 0;
+                    double WeatherTemperatureF = (double?)day["temp"] ?? -100;
+                    double WeatherTemperatureMaxF = (double?)day["tempmax"] ?? -100;
+                    double WeatherTemperatureMinF = (double?)day["tempmin"] ?? -100;
 
-                    weatherInformation = $"Temperature: {(int)WeatherTemperature}°C\n" +
-                                    $"Max temperature: {(int)WeatherTemperatureMax}°C\n" +
-                                    $"Min temperature: {(int)WeatherTemperatureMin}°C\n" +
-                                    $"Wind speed: {WeatherWindSpeed} km/h\n" +
-                                    $"Pressure: {(int)WeatherPressure} hPa\n" +
-                                    $"Cloudcover: {(int)WeatherCloudCover}%\n" +
-                                    $"Visibility: {WeatherVisibility} km";
-
-                }
-                else
-                {
-                    weatherInformation = "Problem with weather data";
+                    WeatherTemperature = (int)((WeatherTemperatureF - 32) * 5 / 9);
+                    WeatherTemperatureMax = (int)((WeatherTemperatureMaxF - 32) * 5 / 9);
+                    WeatherTemperatureMin = (int)((WeatherTemperatureMinF - 32) * 5 / 9);
+                    WeatherWindSpeed = (double?)day["windspeed"] ?? -100;
+                    WeatherPressure = (int)((double?)day["pressure"] ?? -100);
+                    WeatherCloudCover = (int)((double?)day["cloudcover"] ?? -100);
+                    WeatherVisibility = (double?)day["visibility"] ?? -100;
                 }
             }
             catch (HttpRequestException e)
             {
-                weatherInformation = $"Problem with weather data: {e.Message}";
+                Console.WriteLine($"\nException Caught, {e.Message} ");
             }
 
-            // UI update
             await InvokeAsync(StateHasChanged);
         }
     }
