@@ -45,7 +45,11 @@ h3[b-fa7bvjld2f] {
     text-align: center;
 }
 
-
+.temp[b-fa7bvjld2f] {
+    font-size: 5rem;
+    font-weight: normal;
+    padding-left: 52px;
+}
 /* /Pages/FetchData.razor.rz.scp.css */
 body[b-7zu5p4p7l4] {
     font-family: 'Roboto', sans-serif;
