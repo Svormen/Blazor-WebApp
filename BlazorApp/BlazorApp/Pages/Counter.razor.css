@@ -37,6 +37,10 @@ h3 {
     padding: 30px;
 }
 
+.weather-text p {
+    margin: 3px 0;
+}
+
 .temp-row {
     display: flex;
     justify-content: center;
@@ -47,5 +51,10 @@ h3 {
 .temp {
     font-size: 5rem;
     font-weight: normal;
-    padding-left: 52px;
+    padding-left: 30px;
+    line-height: 0.9;
+}
+
+.cloud {
+    padding-top: 10px;
 }

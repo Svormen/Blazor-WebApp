@@ -38,6 +38,10 @@ h3[b-fa7bvjld2f] {
     padding: 30px;
 }
 
+.weather-text p[b-fa7bvjld2f] {
+    margin: 3px 0;
+}
+
 .temp-row[b-fa7bvjld2f] {
     display: flex;
     justify-content: center;
@@ -48,7 +52,12 @@ h3[b-fa7bvjld2f] {
 .temp[b-fa7bvjld2f] {
     font-size: 5rem;
     font-weight: normal;
-    padding-left: 52px;
+    padding-left: 30px;
+    line-height: 0.9;
+}
+
+.cloud[b-fa7bvjld2f] {
+    padding-top: 10px;
 }
 /* /Pages/FetchData.razor.rz.scp.css */
 body[b-7zu5p4p7l4] {
