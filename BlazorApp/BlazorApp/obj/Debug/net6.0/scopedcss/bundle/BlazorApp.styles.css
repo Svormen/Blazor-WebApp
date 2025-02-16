@@ -89,6 +89,8 @@ h3[b-fa7bvjld2f] {
 }
 
 .wind-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;
@@ -97,6 +99,8 @@ h3[b-fa7bvjld2f] {
     width: 110px;
 }
 .pressure-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;
@@ -105,6 +109,8 @@ h3[b-fa7bvjld2f] {
     width: 115px;
 }
 .visibility-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;

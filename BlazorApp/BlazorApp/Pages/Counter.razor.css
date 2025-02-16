@@ -88,6 +88,8 @@ h3 {
 }
 
 .wind-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;
@@ -96,6 +98,8 @@ h3 {
     width: 110px;
 }
 .pressure-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;
@@ -104,6 +108,8 @@ h3 {
     width: 115px;
 }
 .visibility-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 80%;
