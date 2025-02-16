@@ -7,7 +7,7 @@
     background: linear-gradient(180deg, #032c7e, #3b80ee);
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid black;
+    border: 3px solid black;
 }
 
 h1[b-fa7bvjld2f] {
@@ -93,7 +93,7 @@ h3[b-fa7bvjld2f] {
     padding-right: 20px;
     max-width: 80%;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid white;
     width: 110px;
 }
 .pressure-container[b-fa7bvjld2f] {
@@ -101,7 +101,7 @@ h3[b-fa7bvjld2f] {
     padding-right: 20px;
     max-width: 80%;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid white;
     width: 115px;
 }
 .visibility-container[b-fa7bvjld2f] {
@@ -109,7 +109,7 @@ h3[b-fa7bvjld2f] {
     padding-right: 20px;
     max-width: 80%;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid white;
     width: 110px;
 }
 /* /Pages/FetchData.razor.rz.scp.css */
