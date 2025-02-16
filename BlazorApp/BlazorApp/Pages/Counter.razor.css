@@ -6,6 +6,7 @@
     background: linear-gradient(180deg, #032c7e, #3b80ee);
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
 }
 
 h1 {
@@ -46,6 +47,7 @@ h3 {
     justify-content: center;
     gap: 20px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .temp {
@@ -61,4 +63,51 @@ h3 {
 
 .weather-details p {
     font-size: 1rem;
+    line-height: 0.9;
+}
+
+.weather-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.weather-bottom p {
+    font-size: 1rem;
+}
+
+.weather-bottom p .wind {
+    font-size: 2.3rem;
+}
+.weather-bottom p .pressure {
+    font-size: 2rem;
+}
+.weather-bottom p .visibility {
+    font-size: 2.3rem;
+}
+
+.wind-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 110px;
+}
+.pressure-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 115px;
+}
+.visibility-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 110px;
 }

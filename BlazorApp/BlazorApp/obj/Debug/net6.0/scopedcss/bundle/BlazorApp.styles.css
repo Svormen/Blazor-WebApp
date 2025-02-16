@@ -7,6 +7,7 @@
     background: linear-gradient(180deg, #032c7e, #3b80ee);
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
 }
 
 h1[b-fa7bvjld2f] {
@@ -47,6 +48,7 @@ h3[b-fa7bvjld2f] {
     justify-content: center;
     gap: 20px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .temp[b-fa7bvjld2f] {
@@ -62,6 +64,53 @@ h3[b-fa7bvjld2f] {
 
 .weather-details p[b-fa7bvjld2f] {
     font-size: 1rem;
+    line-height: 0.9;
+}
+
+.weather-bottom[b-fa7bvjld2f] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.weather-bottom p[b-fa7bvjld2f] {
+    font-size: 1rem;
+}
+
+.weather-bottom p .wind[b-fa7bvjld2f] {
+    font-size: 2.3rem;
+}
+.weather-bottom p .pressure[b-fa7bvjld2f] {
+    font-size: 2rem;
+}
+.weather-bottom p .visibility[b-fa7bvjld2f] {
+    font-size: 2.3rem;
+}
+
+.wind-container[b-fa7bvjld2f] {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 110px;
+}
+.pressure-container[b-fa7bvjld2f] {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 115px;
+}
+.visibility-container[b-fa7bvjld2f] {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 110px;
 }
 /* /Pages/FetchData.razor.rz.scp.css */
 body[b-7zu5p4p7l4] {
