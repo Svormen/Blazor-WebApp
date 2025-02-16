@@ -59,6 +59,10 @@ h3[b-fa7bvjld2f] {
 .cloud[b-fa7bvjld2f] {
     padding-top: 10px;
 }
+
+.weather-details p[b-fa7bvjld2f] {
+    font-size: 1rem;
+}
 /* /Pages/FetchData.razor.rz.scp.css */
 body[b-7zu5p4p7l4] {
     font-family: 'Roboto', sans-serif;

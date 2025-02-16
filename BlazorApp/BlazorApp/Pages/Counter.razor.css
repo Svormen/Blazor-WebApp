@@ -58,3 +58,7 @@ h3 {
 .cloud {
     padding-top: 10px;
 }
+
+.weather-details p {
+    font-size: 1rem;
+}
