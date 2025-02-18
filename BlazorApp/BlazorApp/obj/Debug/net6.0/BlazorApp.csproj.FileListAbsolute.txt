@@ -1648,3 +1648,4 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/wwwroot/_framework/Newtonsoft.Json.dll.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net6.0/Newtonsoft.Json.dll
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/compressed/8sdwguqhq7.gz
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net6.0/scopedcss/Pages/Cardata.razor.rz.scp.css
