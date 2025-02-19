@@ -1,0 +1,119 @@
+.countdown-container[b-fa7bvjld2f] {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 80%;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #032c7e, #3b80ee);
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid black;
+}
+
+h1[b-fa7bvjld2f] {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h3[b-fa7bvjld2f] {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.countdown-text[b-fa7bvjld2f] {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.weather-text[b-fa7bvjld2f] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.weather-text p[b-fa7bvjld2f] {
+    margin: 3px 0;
+}
+
+.temp-row[b-fa7bvjld2f] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.temp[b-fa7bvjld2f] {
+    font-size: 5rem;
+    font-weight: normal;
+    padding-left: 30px;
+    line-height: 0.9;
+}
+
+.cloud[b-fa7bvjld2f] {
+    padding-top: 10px;
+}
+
+.weather-details p[b-fa7bvjld2f] {
+    font-size: 1rem;
+    line-height: 0.9;
+}
+
+.weather-bottom[b-fa7bvjld2f] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.weather-bottom p[b-fa7bvjld2f] {
+    font-size: 1rem;
+}
+
+.weather-bottom p .wind[b-fa7bvjld2f] {
+    font-size: 2.3rem;
+}
+.weather-bottom p .pressure[b-fa7bvjld2f] {
+    font-size: 2rem;
+}
+.weather-bottom p .visibility[b-fa7bvjld2f] {
+    font-size: 2.3rem;
+}
+
+.wind-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 110px;
+}
+.pressure-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 115px;
+}
+.visibility-container[b-fa7bvjld2f] {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 110px;
+}

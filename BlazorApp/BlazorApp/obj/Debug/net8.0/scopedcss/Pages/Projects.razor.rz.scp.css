@@ -1,0 +1,109 @@
+.titleText[b-xlm6sos3rl] {
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.projects-container[b-xlm6sos3rl] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.project-box[b-xlm6sos3rl] {
+    width: 300px;
+    height: 244px;
+    /*background: linear-gradient(90deg, #ffffff, #c0c0c0);*/
+    background: linear-gradient(180deg, #032c7e, #3b80ee);
+    color: white;
+    border-radius: 23px;
+    border: 3px solid black;
+    /*box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.7);
+    #transition: all 0.5s ease-in-out; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.project-box:not(.active):nth-child(1):hover[b-xlm6sos3rl] {
+    background: linear-gradient(90deg, #ff6f61, #ff6f61);
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.project-box:not(.active):nth-child(2):hover[b-xlm6sos3rl] {
+    background: linear-gradient(90deg, #6a5acd, #6a5acd);
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.project-box:not(.active):nth-child(3):hover[b-xlm6sos3rl] {
+    background: linear-gradient(90deg, #48d1cc, #48d1cc);
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.project-box:not(.active):nth-child(4):hover[b-xlm6sos3rl] {
+    background: linear-gradient(90deg, #ffa500, #ffa500);
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.project-box:not(.active):nth-child(5):hover[b-xlm6sos3rl] {
+    background: linear-gradient(90deg, #32cd32, #32cd32);
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+
+.project-box.active[b-xlm6sos3rl] {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto;  
+    background: linear-gradient(90deg, #82b9f7, #82b9f7);
+    order: -1;
+    padding: 40px;
+    box-shadow: 0 10px 7px rgba(0, 0, 0, 0.5);
+}
+
+.project-header[b-xlm6sos3rl] {
+    color: white;    
+}
+
+.description[b-xlm6sos3rl] {
+    color: black;
+    font-size: larger;
+}
+
+.project-box .linkGithub[b-xlm6sos3rl] {
+    color: black;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.project-box .keywords[b-xlm6sos3rl] {
+    color: black;
+    font-size:medium;
+    margin-top: 10px;
+}
+
+.project-box .conclusion[b-xlm6sos3rl] {
+    color: black;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.project-box.active .project-header[b-xlm6sos3rl] {
+    color: black;
+}
+
+.project-box p[b-xlm6sos3rl] {
+    line-height: 1.6;
+}
