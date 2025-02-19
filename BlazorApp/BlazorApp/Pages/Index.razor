@@ -7,9 +7,15 @@
     body {
         background-color: #f1f1f1;
     }
+    .aboutMeLinks {
+        display: none;
+    }
 </style>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <h1>PROFILE</h1>
+
 <div class="container">
     <h2><u>About me</u><span class="fa fa-user-o" title="Svormen" style="font-size:23px" aria-hidden="true"></span></h2>
     <div class="columnMe">
@@ -31,12 +37,29 @@
         </p>
     </div>
     <br>
-    <p class="aboutMeLinks">
+
+    <button id="showLinksButton" onclick="myFunction()">Show Links</button>
+
+    <p id="aboutMeLinks" class="aboutMeLinks">
         <a href="https://github.com/Svormen" target="_blank">GitHub</a>
         <br>
         <a href="https://www.linkedin.com/in/slavom%C3%ADr-svorada-b6678022b/" target="_blank">LinkedIn</a>
     </p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("aboutMeLinks");
+            x.style.display = (x.style.display === "block") ? "none" : "block";
+            if (x.style.display === "block") {
+                document.getElementById("showLinksButton").innerHTML = "Hide Links";
+            } else {
+                document.getElementById("showLinksButton").innerHTML = "Show Links";
+            }
+        }
+    </script>
+
 </div>
+
 <div class="container">
     <h2><u>Education</u><span class="fa fa-graduation-cap" title="Education" style="font-size:23px"
             aria-hidden="true"></span></h2>
