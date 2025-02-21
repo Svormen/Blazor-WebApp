@@ -57,6 +57,29 @@ p.aboutMeLinks[b-cawgfizwi4] {
     padding: 10px;
 }
 
+.buttonLinks[b-cawgfizwi4] {
+    padding: 5px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #3b80ee;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+}
+
+.buttonLinks:hover[b-cawgfizwi4] {
+    background: linear-gradient(180deg, #032c7e, #3b80ee);
+}
+
+.buttonLinks:active[b-cawgfizwi4] {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+  }
+
 .myPhoto img[b-cawgfizwi4] {
     width: 100%;
     height: auto;
@@ -185,6 +208,7 @@ p.contactInfo[b-cawgfizwi4] {
     padding-top: 10px;
     padding-left: 30px;
 }
+
 .oi[b-cawgfizwi4] {
     margin-right: 10px;
     font-size: 1.5rem;
