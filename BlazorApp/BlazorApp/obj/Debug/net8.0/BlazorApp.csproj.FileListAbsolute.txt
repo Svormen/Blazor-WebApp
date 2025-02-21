@@ -630,7 +630,6 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/wwwroot/_framework/blazor.boot.json.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.wasm.gz
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/wwwroot/_framework/zh-Hant/Microsoft.CodeAnalysis.resources.wasm.gz
-/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/appsettings.json
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/package-lock.json
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/package.json
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/bin/Debug/net8.0/BlazorApp.staticwebassets.runtime.json
@@ -1268,7 +1267,6 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorApp.props
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazorApp.props
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/staticwebassets.pack.json
-/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Cardata.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Counter.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/FetchData.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Index.razor.rz.scp.css

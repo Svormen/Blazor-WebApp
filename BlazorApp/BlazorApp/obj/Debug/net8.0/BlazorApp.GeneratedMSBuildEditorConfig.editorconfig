@@ -42,10 +42,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/Pages/Cardata.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FyZGF0YS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-hyglvz4fm4
-
 [/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-fa7bvjld2f

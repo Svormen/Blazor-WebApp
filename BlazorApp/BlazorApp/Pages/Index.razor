@@ -38,7 +38,8 @@
     </div>
     <br>
 
-    <button id="showLinksButton" onclick="myFunction()">Show Links</button>
+    <button id="showLinksButton" onclick="toggleLinks()">Show Links</button>
+
 
     <p id="aboutMeLinks" class="aboutMeLinks">
         <a href="https://github.com/Svormen" target="_blank">GitHub</a>
@@ -46,18 +47,7 @@
         <a href="https://www.linkedin.com/in/slavom%C3%ADr-svorada-b6678022b/" target="_blank">LinkedIn</a>
     </p>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("aboutMeLinks");
-            x.style.display = (x.style.display === "block") ? "none" : "block";
-            if (x.style.display === "block") {
-                document.getElementById("showLinksButton").innerHTML = "Hide Links";
-            } else {
-                document.getElementById("showLinksButton").innerHTML = "Show Links";
-            }
-        }
-    </script>
-
+    <script src="IndexScripts.js"></script>
 </div>
 
 <div class="container">

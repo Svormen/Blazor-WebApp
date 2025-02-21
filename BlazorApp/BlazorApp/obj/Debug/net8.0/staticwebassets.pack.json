@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/BlazorApp.styles.css"
     },
     {
+      "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/IndexScripts.js",
+      "PackagePath": "staticwebassets/IndexScripts.js"
+    },
+    {
       "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },

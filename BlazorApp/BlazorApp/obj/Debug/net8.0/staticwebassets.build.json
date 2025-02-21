@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/TAHrHsjqq/e2TsxIfVLvfLF0EYN7R1vlhYczlgkm8M=",
+  "Hash": "BEifX4tD+oWFNWRuqrYMBK9VfOev3Qotvt0i/5gSSPg=",
   "Source": "BlazorApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -12346,6 +12346,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/IndexScripts.js",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "IndexScripts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/IndexScripts.js"
     },
     {
       "Identity": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/photo.jpeg",
