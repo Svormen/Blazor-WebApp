@@ -10,44 +10,54 @@
 
 <div class="countdown-container">
     <p class="countdown-text">
-        <h3>🚀 2026 Countdown 🚀</h3>
-        <hr>
-        @countDown
+    <h3>🚀 2026 Countdown 🚀</h3>
+    <hr>
+    @countDown
     </p>
 </div>
 
 <div class="countdown-container">
     <div class="weather-text">
-        <h3>🌦️ Weather 🌦️</h3>
+        <h3>Weather App</h3>
         <hr>
 
-        @if (WeatherTemperature == -100 || WeatherTemperatureMax == -100 || 
-             WeatherTemperatureMin == -100 || WeatherPressure == -100 || 
-             WeatherCloudCover == -100 || WeatherVisibility == -100)
+        @if (WeatherTemperature == -100 || WeatherTemperatureMax == -100 ||
+                WeatherTemperatureMin == -100 || WeatherPressure == -100 ||
+                WeatherCloudCover == -100 || WeatherVisibility == -100 ||
+                WeatherWindSpeed == -100)
         {
             <p>Loading...</p>
         }
         else
         {
             <p><strong><span class="location">Brno</span></strong></p>
+
+            @if (!string.IsNullOrEmpty(WeatherIcon))
+            {
+                <img src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/SVG/1st%20Set%20-%20Color/@(WeatherIcon).svg"
+                    alt="@WeatherIcon" width="100">
+            }
+
             <p><span class="temp">@WeatherTemperature °</span></p>
             <div class="weather-details">
-            <p class="cloud"><strong>Clouds:</strong> <span>@WeatherCloudCover %</span></p>
-            
-            <div class="temp-row">
-                <p><strong>Max:</strong> <span class="max-temp">@WeatherTemperatureMax °</span></p>
-                <p><strong>Min:</strong> <span class="min-temp">@WeatherTemperatureMin °</span></p>
+                <p class="cloud"><strong>Clouds:</strong> <span>@WeatherCloudCover %</span></p>
+
+                <div class="temp-row">
+                    <p><strong>Max:</strong> <span class="max-temp">@WeatherTemperatureMax °</span></p>
+                    <p><strong>Min:</strong> <span class="min-temp">@WeatherTemperatureMin °</span></p>
+                </div>
             </div>
-            </div>
+
             <div class="weather-bottom">
                 <p class="wind-container"><strong>Wind</strong><br><span class="wind">@WeatherWindSpeed<br></span>km/h</p>
-                <p class="pressure-container"><strong>Pressure</strong><br><span class="pressure">@WeatherPressure<br></span>hPa</p>
-                <p class="visibility-container"><strong>Visibility</strong><br><span class="visibility">@WeatherVisibility<br></span>km</p>
+                <p class="pressure-container"><strong>Pressure</strong><br><span
+                        class="pressure">@WeatherPressure<br></span>hPa</p>
+                <p class="visibility-container"><strong>Visibility</strong><br><span
+                        class="visibility">@WeatherVisibility<br></span>km</p>
             </div>
         }
     </div>
 </div>
-
 
 @code {
     private DateTime targetDate = new DateTime(2026, 1, 1, 0, 0, 0);
@@ -56,20 +66,22 @@
 
     private string apiKey = "MZQND65XWUU2RJK74PENNLGQU";
     private string location = "Brno, 64, CZ";
-    
-    private int WeatherTemperature = -100, 
-            WeatherTemperatureMax = -100, 
-            WeatherTemperatureMin = -100, 
-            WeatherPressure = -100, 
-            WeatherCloudCover = -100;
+
+    private int WeatherTemperature = -100,
+    WeatherTemperatureMax = -100,
+    WeatherTemperatureMin = -100,
+    WeatherPressure = -100,
+    WeatherCloudCover = -100;
     private double WeatherWindSpeed = -100,
-            WeatherVisibility = -100;
+    WeatherVisibility = -100;
+    private string WeatherIcon = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
         UpdateCountdown();
         timer = new System.Timers.Timer(1000);
-        timer.Elapsed += (sender, e) => {
+        timer.Elapsed += (sender, e) =>
+        {
             UpdateCountdown();
             InvokeAsync(StateHasChanged);
         };
@@ -90,7 +102,8 @@
         {
             try
             {
-                string url = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}?key={apiKey}";
+                string url =
+                $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}?key={apiKey}";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -111,6 +124,8 @@
                     WeatherPressure = (int)((double?)day["pressure"] ?? -100);
                     WeatherCloudCover = (int)((double?)day["cloudcover"] ?? -100);
                     WeatherVisibility = (double?)day["visibility"] ?? -100;
+
+                    WeatherIcon = (string?)day["icon"] ?? string.Empty;
                 }
             }
             catch (HttpRequestException e)
