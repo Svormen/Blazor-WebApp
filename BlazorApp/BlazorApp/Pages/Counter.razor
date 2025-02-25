@@ -46,6 +46,11 @@
                     <p><strong>Max:</strong> <span class="max-temp">@WeatherTemperatureMax °</span></p>
                     <p><strong>Min:</strong> <span class="min-temp">@WeatherTemperatureMin °</span></p>
                 </div>
+
+                <div class="sunrise-sunset">
+                    <p><strong>🌅 Sunrise:</strong> <span>@Sunrise</span></p>
+                    <p><strong>🌇 Sunset:</strong> <span>@Sunset</span></p>
+                </div>
             </div>
 
             <div class="weather-bottom">
@@ -75,6 +80,8 @@
     private double WeatherWindSpeed = -100,
     WeatherVisibility = -100;
     private string WeatherIcon = string.Empty;
+    private string Sunrise = "N/A";
+    private string Sunset = "N/A";
 
     protected override async Task OnInitializedAsync()
     {
@@ -126,6 +133,10 @@
                     WeatherVisibility = (double?)day["visibility"] ?? -100;
 
                     WeatherIcon = (string?)day["icon"] ?? string.Empty;
+
+                    // Získanie časov sunrise a sunset
+                    Sunrise = (string?)day["sunrise"] ?? "N/A";
+                    Sunset = (string?)day["sunset"] ?? "N/A";
                 }
             }
             catch (HttpRequestException e)
