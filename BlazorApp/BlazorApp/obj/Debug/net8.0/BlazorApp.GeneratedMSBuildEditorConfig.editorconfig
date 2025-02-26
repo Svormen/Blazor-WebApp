@@ -50,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope = b-fa7bvjld2f
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-7zu5p4p7l4
 
+[/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/Pages/Game.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-i32scfyjtx
+
 [/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-cawgfizwi4

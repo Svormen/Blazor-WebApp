@@ -85,6 +85,14 @@
       "PackagePath": "staticwebassets/sample-data/subjects2.json"
     },
     {
+      "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/sunrise.png",
+      "PackagePath": "staticwebassets/sample-data/sunrise.png"
+    },
+    {
+      "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/sunset.png",
+      "PackagePath": "staticwebassets/sample-data/sunset.png"
+    },
+    {
       "Id": "/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/wwwroot/sample-data/weather.json",
       "PackagePath": "staticwebassets/sample-data/weather.json"
     },

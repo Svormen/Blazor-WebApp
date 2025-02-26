@@ -1596,3 +1596,4 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/refint/BlazorApp.dll
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/BlazorApp.pdb
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/ref/BlazorApp.dll
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Game.razor.rz.scp.css
