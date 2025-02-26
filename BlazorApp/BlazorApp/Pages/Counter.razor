@@ -48,8 +48,14 @@
                 </div>
 
                 <div class="sunrise-sunset">
-                    <p><strong>🌅 Sunrise:</strong> <span>@Sunrise</span></p>
-                    <p><strong>🌇 Sunset:</strong> <span>@Sunset</span></p>
+                    <p>
+                        <img src="sample-data/sunrise.png" alt="Sunrise" width="30" height="30">
+                        <span>@Sunrise</span>
+                    </p>
+                    <p>
+                        <span>@Sunset</span>
+                        <img src="sample-data/sunset.png" alt="Sunset" width="30" height="30">
+                    </p>
                 </div>
             </div>
 
@@ -134,7 +140,6 @@
 
                     WeatherIcon = (string?)day["icon"] ?? string.Empty;
 
-                    // Získanie časov sunrise a sunset
                     Sunrise = (string?)day["sunrise"] ?? "N/A";
                     Sunset = (string?)day["sunset"] ?? "N/A";
                 }

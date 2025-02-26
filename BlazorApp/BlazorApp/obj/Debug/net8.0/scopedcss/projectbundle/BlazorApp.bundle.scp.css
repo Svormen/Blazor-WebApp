@@ -48,6 +48,14 @@ h3[b-fa7bvjld2f] {
     justify-content: center;
     gap: 20px;
     text-align: center;
+    padding-bottom: 10px;
+}
+
+.sunrise-sunset[b-fa7bvjld2f] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
     padding-bottom: 20px;
 }
 
@@ -63,7 +71,7 @@ h3[b-fa7bvjld2f] {
 }
 
 .weather-details p[b-fa7bvjld2f] {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 0.9;
 }
 
