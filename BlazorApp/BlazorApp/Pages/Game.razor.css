@@ -27,12 +27,12 @@ td {
 
 .blue-background {
     background-color: #3b80ee;
-    color: white; /* optional, to make text readable */
+    color: white;
 }
 
 .gray-background {
     background-color: lightgrey;
-    color: white; /* optional, to make text readable */
+    color: white;
 }
 
 .buttons-number {
@@ -42,9 +42,54 @@ td {
     margin-top: 20px;
 }
 
+.buttonNumber {
+    padding: 5px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    background-color: lightgray;
+    border-radius: 7px;
+}
+
+.buttonNumber:hover {
+    background: linear-gradient(180deg, #999, #cdcdcd);
+}
+
+.button-check {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
+}
+
+.button {
+    padding: 5px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #3b80ee;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+}
+
+.button:hover {
+    background: linear-gradient(180deg, #032c7e, #3b80ee);
+}
+
+.button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
 }
