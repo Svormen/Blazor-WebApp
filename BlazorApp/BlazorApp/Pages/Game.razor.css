@@ -38,13 +38,13 @@ td {
 .buttons-number {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .buttonNumber {
-    padding: 5px 10px;
-    font-size: 17px;
+    padding: 5px 15px;
+    font-size: 30px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -54,8 +54,9 @@ td {
     border-radius: 7px;
 }
 
-.buttonNumber:hover {
-    background: linear-gradient(180deg, #999, #cdcdcd);
+.selected {
+    background-color: yellow;
+    border: 2px solid orange;
 }
 
 .button-check {
@@ -73,7 +74,7 @@ td {
 
 .button {
     padding: 5px 10px;
-    font-size: 17px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;

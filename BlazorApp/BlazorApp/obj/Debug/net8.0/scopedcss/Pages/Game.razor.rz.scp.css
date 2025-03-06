@@ -38,13 +38,13 @@ td[b-i32scfyjtx] {
 .buttons-number[b-i32scfyjtx] {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .buttonNumber[b-i32scfyjtx] {
-    padding: 5px 10px;
-    font-size: 17px;
+    padding: 5px 15px;
+    font-size: 30px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -54,8 +54,9 @@ td[b-i32scfyjtx] {
     border-radius: 7px;
 }
 
-.buttonNumber:hover[b-i32scfyjtx] {
-    background: linear-gradient(180deg, #999, #cdcdcd);
+.selected[b-i32scfyjtx] {
+    background-color: yellow;
+    border: 2px solid orange;
 }
 
 .button-check[b-i32scfyjtx] {
@@ -73,7 +74,7 @@ td[b-i32scfyjtx] {
 
 .button[b-i32scfyjtx] {
     padding: 5px 10px;
-    font-size: 17px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;

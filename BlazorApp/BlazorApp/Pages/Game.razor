@@ -3,34 +3,113 @@
 <h1>Game</h1>
 <hr>
 
-<!-- Main table for game -->
 <div class="game-container">
     <table>
-        @for (int i = 0; i < 4; i++)
-        {
-            <tr>
-                @for (int j = 0; j < 4; j++)
-                {
-                    <td class="@((i == 0 && j == 0) ? "gray-background" : (i == 0 || j == 0) ? "blue-background" : "")"></td>
-                }
-            </tr>
-        }
+        <tr>
+            <td class="gray-background"></td>
+            <td class="blue-background">@colSums[0]</td>
+            <td class="blue-background">@colSums[1]</td>
+            <td class="blue-background">@colSums[2]</td>
+        </tr>
+        <tr>
+            <td class="blue-background">@rowSums[0]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(0, 0)">@gameGrid[0, 0]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(0, 1)">@gameGrid[0, 1]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(0, 2)">@gameGrid[0, 2]</td>
+        </tr>
+        <tr>
+            <td class="blue-background">@rowSums[1]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(1, 0)">@gameGrid[1, 0]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(1, 1)">@gameGrid[1, 1]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(1, 2)">@gameGrid[1, 2]</td>
+        </tr>
+        <tr>
+            <td class="blue-background">@rowSums[2]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(2, 0)">@gameGrid[2, 0]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(2, 1)">@gameGrid[2, 1]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(2, 2)">@gameGrid[2, 2]</td>
+        </tr>
     </table>
 </div>
 
-<!-- Buttons for putting numbers into the table -->
 <div class="buttons-number">
-    @for(int i = 1; i < 10; i++)
-    {
-        <button class="buttonNumber">@i</button>
-    }
+    <button class="buttonNumber @(selectedNumber == 1 ? "selected" : "")" @onclick="() => SelectNumber(1)">1</button>
+    <button class="buttonNumber @(selectedNumber == 2 ? "selected" : "")" @onclick="() => SelectNumber(2)">2</button>
+    <button class="buttonNumber @(selectedNumber == 3 ? "selected" : "")" @onclick="() => SelectNumber(3)">3</button>
+    <button class="buttonNumber @(selectedNumber == 4 ? "selected" : "")" @onclick="() => SelectNumber(4)">4</button>
+    <button class="buttonNumber @(selectedNumber == 5 ? "selected" : "")" @onclick="() => SelectNumber(5)">5</button>
+    <button class="buttonNumber @(selectedNumber == 6 ? "selected" : "")" @onclick="() => SelectNumber(6)">6</button>
+    <button class="buttonNumber @(selectedNumber == 7 ? "selected" : "")" @onclick="() => SelectNumber(7)">7</button>
+    <button class="buttonNumber @(selectedNumber == 8 ? "selected" : "")" @onclick="() => SelectNumber(8)">8</button>
+    <button class="buttonNumber @(selectedNumber == 9 ? "selected" : "")" @onclick="() => SelectNumber(9)">9</button>
 </div>
 
-<!-- Buttons for new game and reset and check -->
 <div class="buttons">
     <button class="button">Check</button>
-    <button class="button">New Game</button>
-    <button class="button">Reset</button>
+    <button class="button" @onclick="GenerateDigits">New Game</button>
+    <button class="button" @onclick="ResetGrid">Reset</button>
 </div>
 
 <hr>
+<p><br><u>TESTING OUTPUTS</u><br></p>
+<p>Generated numbers: @string.Join(", ", digits)</p>
+<p>Sum of rows: @string.Join(", ", rowSums)</p>
+<p>Sum of columns: @string.Join(", ", colSums)</p>
+<p>Selected number: @selectedNumber</p>
+<p>Game grid: @rowCheck | @colCheck</p>
+
+@code {
+    private int[] digits = new int[9];
+    public int[] rowSums = new int[3];
+    public int[] colSums = new int[3];
+    private int? selectedNumber = null;
+    private int rowCheck = 0;
+    private int colCheck = 0;
+    private int[,] gameGrid = new int[3, 3];
+
+    private void GenerateDigits()
+    {
+        List<int> numbers = Enumerable.Range(1, 9).OrderBy(x => new Random().Next()).ToList();
+        for (int i = 0; i < 9; i++)
+        {
+            digits[i] = numbers[i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            rowSums[i] = digits[i * 3] + digits[i * 3 + 1] + digits[i * 3 + 2];
+            colSums[i] = digits[i] + digits[i + 3] + digits[i + 6];
+        }
+
+        gameGrid = new int[3, 3];
+        StateHasChanged();
+    }
+
+    private void SelectNumber(int number)
+    {
+        selectedNumber = number;
+        StateHasChanged();
+    }
+
+    private void PlaceNumber(int row, int col)
+    {
+        rowCheck = row;
+        colCheck = col;
+        if (selectedNumber.HasValue)
+        {
+            gameGrid[row, col] = selectedNumber.Value;
+            StateHasChanged();
+            selectedNumber = null;
+            StateHasChanged();
+        }
+    }
+
+    private void ResetGrid()
+    {
+        gameGrid = new int[3, 3];
+        selectedNumber = null;
+        rowCheck = 0;
+        colCheck = 0;
+        StateHasChanged();
+    }
+}
