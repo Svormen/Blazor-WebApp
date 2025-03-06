@@ -13,21 +13,21 @@
         </tr>
         <tr>
             <td class="blue-background">@rowSums[0]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(0, 0)">@gameGrid[0, 0]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(0, 1)">@gameGrid[0, 1]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(0, 2)">@gameGrid[0, 2]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(0)">@gameBoard[0]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(1)">@gameBoard[1]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(2)">@gameBoard[2]</td>
         </tr>
         <tr>
             <td class="blue-background">@rowSums[1]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(1, 0)">@gameGrid[1, 0]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(1, 1)">@gameGrid[1, 1]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(1, 2)">@gameGrid[1, 2]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(3)">@gameBoard[3]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(4)">@gameBoard[4]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(5)">@gameBoard[5]</td>
         </tr>
         <tr>
             <td class="blue-background">@rowSums[2]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(2, 0)">@gameGrid[2, 0]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(2, 1)">@gameGrid[2, 1]</td>
-            <td class="playable-cell" @onclick="() => PlaceNumber(2, 2)">@gameGrid[2, 2]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(6)">@gameBoard[6]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(7)">@gameBoard[7]</td>
+            <td class="playable-cell" @onclick="() => PlaceNumber(8)">@gameBoard[8]</td>
         </tr>
     </table>
 </div>
@@ -57,6 +57,7 @@
 <p>Sum of columns: @string.Join(", ", colSums)</p>
 <p>Selected number: @selectedNumber</p>
 <p>Game grid: @rowCheck | @colCheck</p>
+<p>gameBoard: @string.Join(", ", gameBoard)</p>
 
 @code {
     private int[] digits = new int[9];
@@ -65,7 +66,7 @@
     private int? selectedNumber = null;
     private int rowCheck = 0;
     private int colCheck = 0;
-    private int[,] gameGrid = new int[3, 3];
+    private int[] gameBoard = new int[9];
 
     private void GenerateDigits()
     {
@@ -81,7 +82,7 @@
             colSums[i] = digits[i] + digits[i + 3] + digits[i + 6];
         }
 
-        gameGrid = new int[3, 3];
+        gameBoard = new int[9];
         StateHasChanged();
     }
 
@@ -91,13 +92,13 @@
         StateHasChanged();
     }
 
-    private void PlaceNumber(int row, int col)
+    private void PlaceNumber(int index)
     {
-        rowCheck = row;
-        colCheck = col;
+        rowCheck = index / 3;
+        colCheck = index % 3;
         if (selectedNumber.HasValue)
         {
-            gameGrid[row, col] = selectedNumber.Value;
+            gameBoard[index] = selectedNumber.Value;
             StateHasChanged();
             selectedNumber = null;
             StateHasChanged();
@@ -106,10 +107,8 @@
 
     private void ResetGrid()
     {
-        gameGrid = new int[3, 3];
+        gameBoard = new int[9];
         selectedNumber = null;
-        rowCheck = 0;
-        colCheck = 0;
         StateHasChanged();
     }
 }
