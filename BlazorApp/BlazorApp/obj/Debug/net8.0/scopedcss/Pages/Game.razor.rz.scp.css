@@ -55,6 +55,9 @@ td[b-i32scfyjtx] {
     color: white;
 }
 
+.hintActivated[b-i32scfyjtx] {
+    color: blue !important;
+}
 
 .buttons-number[b-i32scfyjtx] {
     display: flex;

@@ -55,6 +55,9 @@ td {
     color: white;
 }
 
+.hintActivated {
+    color: blue !important;
+}
 
 .buttons-number {
     display: flex;

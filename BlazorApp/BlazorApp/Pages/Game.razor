@@ -24,35 +24,53 @@
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[0]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[0] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(0)">@gameBoard[0]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[1] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(1)">@gameBoard[1]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[2] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(2)">@gameBoard[2]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[0] != 0 ? "correct" : "") @(hintIndexes.Contains(0) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(0)">@gameBoard[0]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[1] != 0 ? "correct" : "") @(hintIndexes.Contains(1) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(1)">@gameBoard[1]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[2] != 0 ? "correct" : "") @(hintIndexes.Contains(2) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(2)">@gameBoard[2]</td>
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[1]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[3] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(3)">@gameBoard[3]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[4] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(4)">@gameBoard[4]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[5] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(5)">@gameBoard[5]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[3] != 0 ? "correct" : "") @(hintIndexes.Contains(3) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(3)">@gameBoard[3]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[4] != 0 ? "correct" : "") @(hintIndexes.Contains(4) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(4)">@gameBoard[4]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[5] != 0 ? "correct" : "") @(hintIndexes.Contains(5) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(5)">@gameBoard[5]</td>
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[2]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[6] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(6)">@gameBoard[6]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[7] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(7)">@gameBoard[7]</td>
-                <td class="playable-cell @(isCorrect && gameBoard[8] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(8)">@gameBoard[8]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[6] != 0 ? "correct" : "") @(hintIndexes.Contains(6) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(6)">@gameBoard[6]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[7] != 0 ? "correct" : "") @(hintIndexes.Contains(7) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(7)">@gameBoard[7]</td>
+                <td class="playable-cell @(isCorrect == true && gameBoard[8] != 0 ? "correct" : "") @(hintIndexes.Contains(8) ? "hintActivated" : "")"
+                    @onclick="() => PlaceNumber(8)">@gameBoard[8]</td>
             </tr>
         </table>
     </div>
 
     <div class="buttons-number">
-        <button class="buttonNumber @(selectedNumber == 1 ? "selected" : "")" @onclick="() => SelectNumber(1)">1</button>
-        <button class="buttonNumber @(selectedNumber == 2 ? "selected" : "")" @onclick="() => SelectNumber(2)">2</button>
-        <button class="buttonNumber @(selectedNumber == 3 ? "selected" : "")" @onclick="() => SelectNumber(3)">3</button>
-        <button class="buttonNumber @(selectedNumber == 4 ? "selected" : "")" @onclick="() => SelectNumber(4)">4</button>
-        <button class="buttonNumber @(selectedNumber == 5 ? "selected" : "")" @onclick="() => SelectNumber(5)">5</button>
-        <button class="buttonNumber @(selectedNumber == 6 ? "selected" : "")" @onclick="() => SelectNumber(6)">6</button>
-        <button class="buttonNumber @(selectedNumber == 7 ? "selected" : "")" @onclick="() => SelectNumber(7)">7</button>
-        <button class="buttonNumber @(selectedNumber == 8 ? "selected" : "")" @onclick="() => SelectNumber(8)">8</button>
-        <button class="buttonNumber @(selectedNumber == 9 ? "selected" : "")" @onclick="() => SelectNumber(9)">9</button>
+        <button class="buttonNumber @(selectedNumber == 1 ? "selected" : "")"
+            @onclick="() => SelectNumber(1)">1</button>
+        <button class="buttonNumber @(selectedNumber == 2 ? "selected" : "")"
+            @onclick="() => SelectNumber(2)">2</button>
+        <button class="buttonNumber @(selectedNumber == 3 ? "selected" : "")"
+            @onclick="() => SelectNumber(3)">3</button>
+        <button class="buttonNumber @(selectedNumber == 4 ? "selected" : "")"
+            @onclick="() => SelectNumber(4)">4</button>
+        <button class="buttonNumber @(selectedNumber == 5 ? "selected" : "")"
+            @onclick="() => SelectNumber(5)">5</button>
+        <button class="buttonNumber @(selectedNumber == 6 ? "selected" : "")"
+            @onclick="() => SelectNumber(6)">6</button>
+        <button class="buttonNumber @(selectedNumber == 7 ? "selected" : "")"
+            @onclick="() => SelectNumber(7)">7</button>
+        <button class="buttonNumber @(selectedNumber == 8 ? "selected" : "")"
+            @onclick="() => SelectNumber(8)">8</button>
+        <button class="buttonNumber @(selectedNumber == 9 ? "selected" : "")"
+            @onclick="() => SelectNumber(9)">9</button>
     </div>
 
     <div class="buttons">
@@ -72,6 +90,8 @@
 <p>Game grid: @rowCheck | @colCheck</p>
 <p>Solution: @string.Join(", ", gameBoard)</p>
 <p>Correct solution: @isCorrect</p>
+<p>Hint number: @hintCount </p>
+<p>Hint indexes: @string.Join(", ", hintIndexes)</p>
 
 @code {
     private int[] digits = new int[9];
@@ -82,9 +102,15 @@
     private int colCheck = 0;
     private int[] gameBoard = new int[9];
     private bool isCorrect = false;
+    private int hintCount = 1;
+    private List<int> hintIndexes = new List<int>();
 
     private void GenerateDigits()
     {
+        hintIndexes.Clear();
+        hintCount = 1;
+        isCorrect = false;
+
         List<int> numbers = Enumerable.Range(1, 9).OrderBy(x => new Random().Next()).ToList();
         for (int i = 0; i < 9; i++)
         {
@@ -119,17 +145,27 @@
         else
         {
             gameBoard[index] = 0;
+            if (hintIndexes.Contains(index))
+            {
+                hintIndexes.Remove(index);
+            }
         }
         StateHasChanged();
     }
 
+    // Function for resetting the game grid
     private void ResetGrid()
     {
+        hintIndexes.Clear();
+        hintCount = 1;
+        isCorrect = false;
+
         gameBoard = new int[9];
         selectedNumber = null;
         StateHasChanged();
     }
 
+    // Function for checking the correctness of the game board
     private void Check()
     {
         for (int i = 0; i < 3; i++)
@@ -149,8 +185,22 @@
         StateHasChanged();
     }
 
+    // Function for hinting the correct solution
     private void Hint()
     {
+        if (digits.All(x => x == 0))
+        {
+            return;
+        }
+        if (hintCount > 9)
+        {
+            return;
+        }
 
+        int wantedIndex = Array.IndexOf(digits, hintCount);
+        gameBoard[wantedIndex] = hintCount;
+        hintCount++;
+        hintIndexes.Add(wantedIndex);
+        StateHasChanged();
     }
 }
