@@ -41,6 +41,10 @@ td[b-i32scfyjtx] {
     cursor: pointer;
 }
 
+.correct[b-i32scfyjtx] {
+    background-color: lightgreen;
+}
+
 .blue-background[b-i32scfyjtx] {
     background-color: #3b80ee;
     color: white;

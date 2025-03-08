@@ -6,6 +6,11 @@
 <ul class="app-description">
     <h3>Game Description</h3>
     <li>Fill the grid with numbers from 1 to 9. Each row and column must sum to the number in the blue cell.</li>
+    <li>Click on a number to select it, then click on a cell to place the number.</li>
+    <li>Click on the "Check" button to see if your solution is correct.</li>
+    <li>Click on the "Hint" button to see the correct solution.</li>
+    <li>Click on the "New Game" button to generate a new grid.</li>
+    <li>Click on the "Reset" button to clear the grid.</li>
 </ul>
 
 <div class="app-container">
@@ -19,44 +24,35 @@
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[0]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(0)">@gameBoard[0]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(1)">@gameBoard[1]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(2)">@gameBoard[2]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[0] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(0)">@gameBoard[0]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[1] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(1)">@gameBoard[1]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[2] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(2)">@gameBoard[2]</td>
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[1]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(3)">@gameBoard[3]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(4)">@gameBoard[4]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(5)">@gameBoard[5]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[3] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(3)">@gameBoard[3]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[4] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(4)">@gameBoard[4]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[5] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(5)">@gameBoard[5]</td>
             </tr>
             <tr>
                 <td class="blue-background">@rowSums[2]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(6)">@gameBoard[6]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(7)">@gameBoard[7]</td>
-                <td class="playable-cell" @onclick="() => PlaceNumber(8)">@gameBoard[8]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[6] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(6)">@gameBoard[6]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[7] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(7)">@gameBoard[7]</td>
+                <td class="playable-cell @(isCorrect && gameBoard[8] != 0 ? "correct" : "")" @onclick="() => PlaceNumber(8)">@gameBoard[8]</td>
             </tr>
         </table>
     </div>
 
     <div class="buttons-number">
-        <button class="buttonNumber @(selectedNumber == 1 ? "selected" : "")"
-            @onclick="() => SelectNumber(1)">1</button>
-        <button class="buttonNumber @(selectedNumber == 2 ? "selected" : "")"
-            @onclick="() => SelectNumber(2)">2</button>
-        <button class="buttonNumber @(selectedNumber == 3 ? "selected" : "")"
-            @onclick="() => SelectNumber(3)">3</button>
-        <button class="buttonNumber @(selectedNumber == 4 ? "selected" : "")"
-            @onclick="() => SelectNumber(4)">4</button>
-        <button class="buttonNumber @(selectedNumber == 5 ? "selected" : "")"
-            @onclick="() => SelectNumber(5)">5</button>
-        <button class="buttonNumber @(selectedNumber == 6 ? "selected" : "")"
-            @onclick="() => SelectNumber(6)">6</button>
-        <button class="buttonNumber @(selectedNumber == 7 ? "selected" : "")"
-            @onclick="() => SelectNumber(7)">7</button>
-        <button class="buttonNumber @(selectedNumber == 8 ? "selected" : "")"
-            @onclick="() => SelectNumber(8)">8</button>
-        <button class="buttonNumber @(selectedNumber == 9 ? "selected" : "")"
-            @onclick="() => SelectNumber(9)">9</button>
+        <button class="buttonNumber @(selectedNumber == 1 ? "selected" : "")" @onclick="() => SelectNumber(1)">1</button>
+        <button class="buttonNumber @(selectedNumber == 2 ? "selected" : "")" @onclick="() => SelectNumber(2)">2</button>
+        <button class="buttonNumber @(selectedNumber == 3 ? "selected" : "")" @onclick="() => SelectNumber(3)">3</button>
+        <button class="buttonNumber @(selectedNumber == 4 ? "selected" : "")" @onclick="() => SelectNumber(4)">4</button>
+        <button class="buttonNumber @(selectedNumber == 5 ? "selected" : "")" @onclick="() => SelectNumber(5)">5</button>
+        <button class="buttonNumber @(selectedNumber == 6 ? "selected" : "")" @onclick="() => SelectNumber(6)">6</button>
+        <button class="buttonNumber @(selectedNumber == 7 ? "selected" : "")" @onclick="() => SelectNumber(7)">7</button>
+        <button class="buttonNumber @(selectedNumber == 8 ? "selected" : "")" @onclick="() => SelectNumber(8)">8</button>
+        <button class="buttonNumber @(selectedNumber == 9 ? "selected" : "")" @onclick="() => SelectNumber(9)">9</button>
     </div>
 
     <div class="buttons">
@@ -74,7 +70,8 @@
 <p>Sum of columns: @string.Join(", ", colSums)</p>
 <p>Selected number: @selectedNumber</p>
 <p>Game grid: @rowCheck | @colCheck</p>
-<p>Solving: @string.Join(", ", gameBoard)</p>
+<p>Solution: @string.Join(", ", gameBoard)</p>
+<p>Correct solution: @isCorrect</p>
 
 @code {
     private int[] digits = new int[9];
@@ -84,6 +81,7 @@
     private int rowCheck = 0;
     private int colCheck = 0;
     private int[] gameBoard = new int[9];
+    private bool isCorrect = false;
 
     private void GenerateDigits()
     {
@@ -116,15 +114,13 @@
         if (selectedNumber.HasValue)
         {
             gameBoard[index] = selectedNumber.Value;
-            StateHasChanged();
             selectedNumber = null;
-            StateHasChanged();
         }
         else
         {
             gameBoard[index] = 0;
-            StateHasChanged();
         }
+        StateHasChanged();
     }
 
     private void ResetGrid()
@@ -136,7 +132,21 @@
 
     private void Check()
     {
-
+        for (int i = 0; i < 3; i++)
+        {
+            if (rowSums[i] != gameBoard[i * 3] + gameBoard[i * 3 + 1] + gameBoard[i * 3 + 2])
+            {
+                isCorrect = false;
+                break;
+            }
+            if (colSums[i] != gameBoard[i] + gameBoard[i + 3] + gameBoard[i + 6])
+            {
+                isCorrect = false;
+                break;
+            }
+            isCorrect = true;
+        }
+        StateHasChanged();
     }
 
     private void Hint()

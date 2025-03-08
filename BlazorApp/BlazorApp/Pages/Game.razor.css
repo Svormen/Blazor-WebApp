@@ -41,6 +41,10 @@ td {
     cursor: pointer;
 }
 
+.correct {
+    background-color: lightgreen;
+}
+
 .blue-background {
     background-color: #3b80ee;
     color: white;
