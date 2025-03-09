@@ -90,7 +90,6 @@
 <p>Game grid: @rowCheck | @colCheck</p>
 <p>Solution: @string.Join(", ", gameBoard)</p>
 <p>Correct solution: @isCorrect</p>
-<p>Hint number: @hintCount </p>
 <p>Hint indexes: @string.Join(", ", hintIndexes)</p>
 
 @code {
@@ -102,13 +101,12 @@
     private int colCheck = 0;
     private int[] gameBoard = new int[9];
     private bool isCorrect = false;
-    private int hintCount = 1;
     private List<int> hintIndexes = new List<int>();
 
+    // Function for generating the game board
     private void GenerateDigits()
     {
         hintIndexes.Clear();
-        hintCount = 1;
         isCorrect = false;
 
         List<int> numbers = Enumerable.Range(1, 9).OrderBy(x => new Random().Next()).ToList();
@@ -127,12 +125,14 @@
         StateHasChanged();
     }
 
+    // Function for selecting a number
     private void SelectNumber(int number)
     {
         selectedNumber = number;
         StateHasChanged();
     }
 
+    // Function for placing a number in the game grid
     private void PlaceNumber(int index)
     {
         rowCheck = index / 3;
@@ -144,6 +144,7 @@
         }
         else
         {
+            isCorrect = false;
             gameBoard[index] = 0;
             if (hintIndexes.Contains(index))
             {
@@ -157,7 +158,6 @@
     private void ResetGrid()
     {
         hintIndexes.Clear();
-        hintCount = 1;
         isCorrect = false;
 
         gameBoard = new int[9];
@@ -192,15 +192,25 @@
         {
             return;
         }
-        if (hintCount > 9)
+
+        int wantedIndex = -1;
+        int wantedNumber = -1;
+
+        for (int i = 1; i <= 9; i++)
         {
-            return;
+            if (!gameBoard.Contains(i))
+            {
+                wantedNumber = i;
+                wantedIndex = Array.IndexOf(digits, i);
+                break;
+            }
         }
 
-        int wantedIndex = Array.IndexOf(digits, hintCount);
-        gameBoard[wantedIndex] = hintCount;
-        hintCount++;
-        hintIndexes.Add(wantedIndex);
-        StateHasChanged();
+        if (wantedIndex != -1)
+        {
+            gameBoard[wantedIndex] = wantedNumber;
+            hintIndexes.Add(wantedIndex);
+            StateHasChanged();
+        }
     }
 }
