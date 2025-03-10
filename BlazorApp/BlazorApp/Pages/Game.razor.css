@@ -5,6 +5,12 @@ h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
 .game-container {
     display: flex;
     justify-content: center;
@@ -14,7 +20,7 @@ h1 {
 .app-container {
     text-align: center;
     margin: 50px auto;
-    padding-top: 7px;
+    padding-top: 17px;
     padding-bottom: 40px;
     max-width: 80%;
     border-radius: 15px;
@@ -26,15 +32,25 @@ h1 {
 table {
     width: 60%;
     max-width: 400px;
-    border-collapse: collapse;
+    border-spacing: 10px;
 }
 
 td {
     width: 25%;
     height: 80px;
-    border: 2px solid black;
     text-align: center;
     font-size: 40px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+.playable-cell:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
 }
 
 .playable-cell {
@@ -42,12 +58,12 @@ td {
 }
 
 .correct {
-    background-color: lightgreen;
+    background-color: #c2f0c2;
 }
 
 .blue-background {
     background-color: #3b80ee;
-    color: white;
+    color: rgb(234, 234, 234);
 }
 
 .gray-background {
@@ -56,7 +72,7 @@ td {
 }
 
 .hintActivated {
-    color: blue !important;
+    color: blue;
 }
 
 .buttons-number {
@@ -75,12 +91,14 @@ td {
     outline: none;
     color: #000;
     background-color: lightgray;
+    border: #777777 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
 }
 
 .selected {
-    background-color: yellow;
-    border: 2px solid orange;
+    background-color: rgb(255, 255, 152);
+    border: 1px solid rgb(130, 130, 79);
 }
 
 .button-check {
@@ -105,7 +123,7 @@ td {
     outline: none;
     color: #fff;
     background-color: #3b80ee;
-    border: #000 0.5px solid;
+    border: #032c7e 0.5px solid;
     border-radius: 13px;
     box-shadow: 0 4px #999;
 }
