@@ -1269,6 +1269,7 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Counter.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/FetchData.razor.rz.scp.css
+/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Game.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Index.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Projects.razor.rz.scp.css
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
@@ -1596,4 +1597,3 @@
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/refint/BlazorApp.dll
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/BlazorApp.pdb
 /Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/ref/BlazorApp.dll
-/Users/ssvorada/Projects/WebApp/BlazorApp/BlazorApp/obj/Debug/net8.0/scopedcss/Pages/Game.razor.rz.scp.css
