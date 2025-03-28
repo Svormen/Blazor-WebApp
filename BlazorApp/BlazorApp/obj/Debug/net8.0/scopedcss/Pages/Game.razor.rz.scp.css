@@ -8,6 +8,7 @@ h1[b-i32scfyjtx] {
 h3[b-i32scfyjtx] {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
     color: rgb(63, 63, 63);
 }
 
@@ -18,7 +19,6 @@ h3[b-i32scfyjtx] {
 }
 
 .app-container[b-i32scfyjtx] {
-    text-align: center;
     margin: 50px auto;
     padding-top: 17px;
     padding-bottom: 40px;
@@ -27,6 +27,12 @@ h3[b-i32scfyjtx] {
     background: linear-gradient(0deg, #ffffff, #dcdcdc);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     border: 3px solid black;
+}
+
+.timer[b-i32scfyjtx] {
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
 }
 
 table[b-i32scfyjtx] {

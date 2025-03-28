@@ -15,6 +15,10 @@
 
 <div class="app-container">
     <h3><u>Sum Grid</u></h3>
+    <span class="timer">
+        Timer: @( (elapsedTime / 60).ToString("D2") ):@( (elapsedTime % 60).ToString("D2") )
+    </span>
+
     <div class="game-container">
         <table>
             <tr>
@@ -104,6 +108,27 @@
     private bool isCorrect = false;
     private List<int> hintIndexes = new List<int>();
 
+    private System.Timers.Timer? timer;
+    private int elapsedTime = 0;
+
+    private void StartTimer()
+    {
+        elapsedTime = 0;
+        timer?.Stop();
+        timer = new System.Timers.Timer(1000);
+        timer.Elapsed += (sender, e) =>
+        {
+            elapsedTime++;
+            InvokeAsync(StateHasChanged);
+        };
+        timer.Start();
+    }
+
+    private void StopTimer()
+    {
+        timer?.Stop();
+    }
+
     // Function for generating the game board
     private void GenerateDigits()
     {
@@ -123,6 +148,7 @@
         }
 
         gameBoard = new int[9];
+        StartTimer();
         StateHasChanged();
     }
 
@@ -163,28 +189,27 @@
 
         gameBoard = new int[9];
         selectedNumber = null;
+        StartTimer();
         StateHasChanged();
     }
 
     // Function for checking the correctness of the game board
     private void Check()
     {
+        isCorrect = true;
         for (int i = 0; i < 3; i++)
         {
-            if (rowSums[i] != gameBoard[i * 3] + gameBoard[i * 3 + 1] + gameBoard[i * 3 + 2])
+            if (rowSums[i] != gameBoard[i * 3] + gameBoard[i * 3 + 1] + gameBoard[i * 3 + 2] ||
+                colSums[i] != gameBoard[i] + gameBoard[i + 3] + gameBoard[i + 6])
             {
                 isCorrect = false;
                 break;
             }
-            if (colSums[i] != gameBoard[i] + gameBoard[i + 3] + gameBoard[i + 6])
-            {
-                isCorrect = false;
-                break;
-            }
-            isCorrect = true;
         }
+        if (isCorrect) StopTimer();
         StateHasChanged();
     }
+
 
     // Function for hinting the correct solution
     private void Hint()
