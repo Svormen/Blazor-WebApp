@@ -14,10 +14,8 @@
 </ul>
 
 <div class="app-container">
+    <span class="oi oi-clock" title="timer" aria-hidden="true"></span> @( (elapsedTime / 60).ToString("D2") ):@( (elapsedTime % 60).ToString("D2") )
     <h3><u>Sum Grid</u></h3>
-    <span class="timer">
-        Timer: @( (elapsedTime / 60).ToString("D2") ):@( (elapsedTime % 60).ToString("D2") )
-    </span>
 
     <div class="game-container">
         <table>
@@ -111,6 +109,7 @@
     private System.Timers.Timer? timer;
     private int elapsedTime = 0;
 
+    // Function for starting the timer
     private void StartTimer()
     {
         elapsedTime = 0;
@@ -124,6 +123,7 @@
         timer.Start();
     }
 
+    // Function for stopping the timer
     private void StopTimer()
     {
         timer?.Stop();
